@@ -1,7 +1,7 @@
 # This is the main stateful OikoApp, this pops things into the URL etc.
 app:
   js:
-    dist/oiko.app.js: { }
+    dist/oiko.app.js: { preprocess: false }
   version: '1.0.1'
   dependencies:
     - core/drupalSettings
