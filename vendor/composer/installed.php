@@ -3,7 +3,7 @@
         'name' => 'computerminds/oiko',
         'pretty_version' => 'dev-master',
         'version' => 'dev-master',
-        'reference' => 'ee2b4c4b225ed6adc7fabf5cd0664eb6ea44d017',
+        'reference' => 'a2c801bb00ffaf5c056a5881b0ce88039a1a114c',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -76,7 +76,7 @@
         'computerminds/oiko' => array(
             'pretty_version' => 'dev-master',
             'version' => 'dev-master',
-            'reference' => 'ee2b4c4b225ed6adc7fabf5cd0664eb6ea44d017',
+            'reference' => 'a2c801bb00ffaf5c056a5881b0ce88039a1a114c',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
