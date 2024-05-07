@@ -32,7 +32,7 @@
       });
 
       // Check to see if we need to open the sidebar immediately.
-      $(once('oiko_leaflet__popups', document)).each(function () {
+      $(once('oiko_leaflet__popups', 'html')).each(function () {
         if (drupalSettings.hasOwnProperty('oiko_leaflet') && drupalSettings.oiko_leaflet.hasOwnProperty('popup') && drupalSettings.oiko_leaflet.popup) {
           // We might need to wait for everything we need to be loaded.
           $(window).bind('load', function () {
