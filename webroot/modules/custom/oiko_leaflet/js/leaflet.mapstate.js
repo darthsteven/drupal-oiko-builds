@@ -57,10 +57,26 @@
       };
 
       $(document).on('leaflet.features', function (e, initial, drupalLeaflet) {
-        if (drupalLeaflet.map_definition.mapid === mapid) {
+        if (drupalLeaflet.mapid === mapid) {
           // Fit bounds after adding features.
           setTimeout(function () {
-            self.fitbounds();
+            // We need to emit an event here.
+            // This passes over to our 'app' code, that decides if we should use
+            // the values from the URL, and if not, then it calls our 'resizeCallback' here.
+            const event = new CustomEvent("oiko-set-map-bounds", {
+              detail: {
+                resizeCallback: function () {
+                  if (Drupal.Leaflet[mapid] && Drupal.Leaflet[mapid].mainLayer) {
+                    var bounds;
+                    if (bounds = Drupal.Leaflet[mapid].mainLayer.getBounds()) {
+                      Drupal.Leaflet[mapid].lMap.fitBounds(bounds)
+                    }
+                  }
+                }
+              }
+            });
+            document.dispatchEvent(event);
+
           }, 250);
         }
       });

@@ -9,7 +9,7 @@ import { QUERYSTRING_VARIABLE_VISUALISATION, QUERYSTRING_VARIABLE_MAP_ZOOM, QUER
 import { changeQueryString, fetchQueryStringElements, fetchQueryStringElementsStructured, changeQueryStringStructured } from './plumbing/querystring-helpers';
 
 function mapState(state = {
-  level: 1,
+  level: -1,
   lat: 0,
   lng: 0
 }, action) {

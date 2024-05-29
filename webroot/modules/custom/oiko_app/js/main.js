@@ -133,6 +133,7 @@ if (['oiko', 'medmus'].indexOf(drupalSettings.ajaxPageState.theme) > -1) {
   };
 
   $(window).bind('oiko.loaded', function () {
+    // Hide the naff 'loading screen'.
     $('.oiko-app--loader').hide();
 
     // Bind to hide/show the correct visualisation.
@@ -173,7 +174,7 @@ if (['oiko', 'medmus'].indexOf(drupalSettings.ajaxPageState.theme) > -1) {
   });
 
 
-// Probably a better way to write this.
+  // There is probably a better way to write this.
   $(document).on('leaflet.map', function (e, mapDefinition, map, mapid) {
     var drupalLeaflet = Drupal.Leaflet[mapid];
 
@@ -215,6 +216,11 @@ if (['oiko', 'medmus'].indexOf(drupalSettings.ajaxPageState.theme) > -1) {
           }
         }
 
+        // If we set the default zoom level, that's fine, ignore the other values.
+        if (state.mapState.level == -1) {
+          changedNeeded = false;
+        }
+
         if (changedNeeded && state.visualisation === 'map') {
           map.setView({
             lat: state.mapState.lat,
@@ -222,6 +228,15 @@ if (['oiko', 'medmus'].indexOf(drupalSettings.ajaxPageState.theme) > -1) {
           }, state.mapState.level, {animate: true});
         }
       };
+
+      document.addEventListener('oiko-set-map-bounds', (mapBoundsEvent) => {
+        // If the map zoom level has been set in the URL or state already,
+        // prefer that, otherwise call the events callback.
+        let state = store.getState();
+        if (state.mapState.level == -1) {
+          mapBoundsEvent.detail.resizeCallback();
+        }
+      }, false);
 
       $(window).on('oiko.loaded', () => {
         handleMapStoreStateChange();
