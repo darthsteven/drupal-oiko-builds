@@ -14,3 +14,22 @@
 .cidoc-references-widget-cell {
   vertical-align: top;
 }
+
+/** Align the jQuery UI styling with the text field entry **/
+.ui-widget {
+  font-family: inherit !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active, a.ui-button:active, .ui-button:active, .ui-button.ui-state-active:hover {
+  background: none !important;
+  border-color: #0074bd !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active {
+  color: #0074bd !important;
+}
+
+.ui-menu .ui-menu-item-wrapper {
+  padding-left: calc(0.4em + 1px) !important;
+  padding-right: 0.5em !important;
+}
