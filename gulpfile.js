@@ -1,7 +1,5 @@
 // Import all the modules we need.
 var gulp = require('gulp');
-var buffer = require('vinyl-buffer');
-var browserSync = require('browser-sync').create();
 var sourcemaps = require('gulp-sourcemaps');
 var sass = require('gulp-sass');
 var eyeglass = require("eyeglass");
@@ -29,8 +27,7 @@ gulp.task('compile:sass:medmus', function () {
       .pipe(sass(eyeglass(sassOptions)).on("error", sass.logError))
       .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions', 'ie >= 9'] }) ]))
       .pipe(sourcemaps.write())
-      .pipe(gulp.dest('webroot/themes/custom/medmus/css'))
-      .pipe(browserSync.reload({stream: true}));
+      .pipe(gulp.dest('webroot/themes/custom/medmus/css'));
 });
 
 gulp.task('compile:sass:oiko', function () {
@@ -51,8 +48,7 @@ gulp.task('compile:sass:oiko', function () {
     .pipe(sass(eyeglass(sassOptions)).on("error", sass.logError))
     .pipe(postcss([ autoprefixer({ browsers: ['last 2 versions', 'ie >= 9'] }) ]))
     .pipe(sourcemaps.write())
-    .pipe(gulp.dest('webroot/themes/custom/oiko/css'))
-    .pipe(browserSync.reload({stream: true}));
+    .pipe(gulp.dest('webroot/themes/custom/oiko/css'));
 });
 
 gulp.task('compile:sass', ['compile:sass:oiko', 'compile:sass:medmus']);
@@ -81,32 +77,7 @@ gulp.task('compile:webpack', function () {
     .pipe(gulp.dest('webroot/modules/custom/oiko_app/dist/'));
 });
 
-gulp.task('watch:js', ['compile:js'], function (done) {
-  browserSync.reload();
-  done();
-});
-
-gulp.task('watch:twig', function (done) {
-  browserSync.reload();
-  done();
-});
+gulp.task('watch:js', ['compile:js']);
 
 // Main compile task.
 gulp.task('compile', ['compile:sass', 'compile:js', 'compile:webpack']);
-
-gulp.task('browsersync', ['compile:js', 'compile:webpack', 'compile:sass'], function(){
-  // Watch CSS and JS files
-  var files = [
-    'css/*css',
-    'js/*js',
-  ];
-
-  //initialize browsersync
-  browserSync.init(files);
-
-  gulp.watch(['webroot/themes/custom/**/*.js', 'webroot/modules/custom/**/*.js', '!webroot/modules/custom/oiko_app/js/**/*.js'], ['watch:js']);
-  gulp.watch('webroot/modules/custom/oiko_app/js/**/*.js', ['compile:webpack']);
-  gulp.watch(['webroot/themes/custom/**/*.twig', 'webroot/modules/custom/**/*.twig'], ['watch:twig']);
-  gulp.watch(['.drush-cache-rebuild'], ['watch:twig']);
-  gulp.watch('webroot/themes/custom/**/*.scss', ['compile:sass']);
-});
