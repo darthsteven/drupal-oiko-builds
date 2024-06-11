@@ -10,6 +10,7 @@
     var drupalLeaflet = Drupal.Leaflet[mapid];
     var drupalLeafletInstance = $('#'+ mapid).data('leaflet');
     var mapid_stored = mapid;
+    Drupal.oiko.addAppModule('marker-data--' + mapid_stored);
 
     // @TODO: Move this code, it does NOT belong here!
     if (mapDefinition.hasOwnProperty('data-url') && mapDefinition['data-url'] && mapDefinition.hasOwnProperty('data-url-number-pages') && mapDefinition['data-url-number-pages']) {
@@ -34,9 +35,11 @@
         var leafletInstance = $('#' + mapid_stored).data('leaflet');
         leafletInstance.add_features(mapid_stored, loadedFeatures);
         Drupal.oiko.appModuleDoneLoading('marker-data');
+        Drupal.oiko.appModuleDoneLoading('marker-data--' + mapid_stored);
       }, function (e) {
         // Error, just load the marker-data.
         Drupal.oiko.appModuleDoneLoading('marker-data');
+        Drupal.oiko.appModuleDoneLoading('marker-data--' + mapid_stored);
       });
 
     }
@@ -45,6 +48,7 @@
       var leafletInstance = $('#' + mapid_stored).data('leaflet');
       leafletInstance.add_features(mapid_stored, []);
       Drupal.oiko.appModuleDoneLoading('marker-data');
+      Drupal.oiko.appModuleDoneLoading('marker-data--' + mapid_stored);
     }
 
     if (mapDefinition.hasOwnProperty('empires') && mapDefinition.empires) {

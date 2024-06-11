@@ -18,6 +18,19 @@ export function createOikoApp() {
   return new oikoApp();
 }
 
+function debounce(func, timeout = 300){
+  let timers = {};
+  return (...args) => {
+    const ns = JSON.stringify(args);
+    clearTimeout(timers[ns]);
+    timers[ns] = setTimeout(() => { func.apply(this, args); }, timeout);
+  };
+}
+
+const oikoLoadedFunction = debounce((appModules) => {
+  $(window).trigger('oiko.loaded', appModules);
+}, 500);
+
 class oikoApp {
   constructor() {
     const history = createHistory();
@@ -53,7 +66,7 @@ class oikoApp {
       }
 
       if (initDone) {
-        $(window).trigger('oiko.loaded', appModules);
+        oikoLoadedFunction(appModules);
         this.initFired = true;
       }
     };

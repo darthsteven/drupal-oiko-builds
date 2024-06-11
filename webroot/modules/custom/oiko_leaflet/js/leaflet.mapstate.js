@@ -56,29 +56,21 @@
         $(document).trigger('leaflet.features', [initial || false, self])
       };
 
-      $(document).on('leaflet.features', function (e, initial, drupalLeaflet) {
-        if (drupalLeaflet.mapid === mapid) {
-          // Fit bounds after adding features.
-          setTimeout(function () {
-            // We need to emit an event here.
-            // This passes over to our 'app' code, that decides if we should use
-            // the values from the URL, and if not, then it calls our 'resizeCallback' here.
-            const event = new CustomEvent("oiko-set-map-bounds", {
-              detail: {
-                resizeCallback: function () {
-                  if (Drupal.Leaflet[mapid] && Drupal.Leaflet[mapid].mainLayer) {
-                    var bounds;
-                    if (bounds = Drupal.Leaflet[mapid].mainLayer.getBounds()) {
-                      Drupal.Leaflet[mapid].lMap.fitBounds(bounds)
-                    }
-                  }
+
+      $(window).bind('oiko.loaded', function() {
+        const event = new CustomEvent("oiko-set-map-bounds", {
+          detail: {
+            resizeCallback: function () {
+              if (Drupal.Leaflet[mapid] && Drupal.Leaflet[mapid].mainLayer) {
+                var bounds;
+                if (bounds = Drupal.Leaflet[mapid].mainLayer.getBounds()) {
+                  Drupal.Leaflet[mapid].lMap.fitBounds(bounds)
                 }
               }
-            });
-            document.dispatchEvent(event);
-
-          }, 250);
-        }
+            }
+          }
+        });
+        document.dispatchEvent(event);
       });
 
     }
