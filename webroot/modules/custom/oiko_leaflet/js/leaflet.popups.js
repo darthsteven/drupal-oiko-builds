@@ -87,7 +87,12 @@
         var tooltip = lFeature.getMedmusTooltip();
         if (typeof feature.id !== 'undefined') {
           tooltip.on('click', function (e) {
-            Drupal.oiko.openSidebar(feature.id);
+            if (typeof feature.sidebar_id !== 'undefined') {
+              Drupal.oiko.openSidebar(feature.sidebar_id);
+            }
+            else {
+              Drupal.oiko.openSidebar(feature.id);
+            }
           });
         }
 
@@ -246,7 +251,12 @@
                 Drupal.oiko.openSidebar($(e.originalEvent.target).data('cidoc-id'));
               }
               else {
-                Drupal.oiko.openSidebar(feature.id);
+                if (typeof feature.sidebar_id !== 'undefined') {
+                  Drupal.oiko.openSidebar(feature.sidebar_id);
+                }
+                else {
+                  Drupal.oiko.openSidebar(feature.id);
+                }
               }
             }
           });
@@ -258,7 +268,12 @@
               Drupal.oiko.openSidebar($(e.originalEvent.target).data('cidoc-id'));
             }
             else {
-              Drupal.oiko.openSidebar(feature.id);
+              if (typeof feature.sidebar_id !== 'undefined') {
+                Drupal.oiko.openSidebar(feature.sidebar_id);
+              }
+              else {
+                Drupal.oiko.openSidebar(feature.id);
+              }
             }
           });
         }

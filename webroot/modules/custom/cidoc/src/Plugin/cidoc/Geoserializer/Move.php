@@ -88,7 +88,7 @@ class Move extends GeoserializerPluginBase {
       $points[$id] = $this->addCommonPointValues($point, $entity);
     }
 
-    return $this->filterDataPointsToSiteSettings($this->addTemporalDataToPoints($points, $entity));
+    return $this->alterPoints($this->filterDataPointsToSiteSettings($this->addTemporalDataToPoints($points, $entity)), $entity);
   }
 
 }

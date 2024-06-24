@@ -17,7 +17,7 @@ use Symfony\Component\DependencyInjection\ContainerInterface;
  */
 class Fallback extends GeoserializerPluginBase {
   public function getGeospatialData(CidocEntityInterface $entity) {
-    return $this->filterDataPointsToSiteSettings([]);
+    return $this->alterPoints($this->filterDataPointsToSiteSettings([]), $entity);
   }
 
 }

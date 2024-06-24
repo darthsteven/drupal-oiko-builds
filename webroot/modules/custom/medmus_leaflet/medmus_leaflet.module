@@ -70,3 +70,24 @@ function medmus_leaflet_cidoc_geoserializer_point_tags_alter(&$tags, array $poin
     $tags[] = $tag;
   }
 }
+
+/**
+ * Implements hook_cidoc_geoserializer_points_alter().
+ */
+function medmus_leaflet_cidoc_geoserializer_points_alter(array &$points, CidocEntityInterface $entity) {
+  if (!empty($points)) {
+    if ($entity->bundle() == 'e65_creation') {
+      $created_works = array_filter($entity->getForwardReferencedEntities(['p94_has_created']), function ($cidocEntity) {
+        return $cidocEntity->bundle() == 'ec1_work';
+      });
+      /* @var CidocEntityInterface[] $createdWorks */
+      foreach ($created_works as $createdWorkEntity) {
+        // We want to show this item in the sidebar
+        foreach ($points as $id => $point) {
+          $points[$id]['sidebar_id'] = $createdWorkEntity->id();
+        }
+        break;
+      }
+    }
+  }
+}

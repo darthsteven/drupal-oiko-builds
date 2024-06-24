@@ -161,4 +161,16 @@ abstract class GeoserializerPluginBase extends PluginBase implements Geoserializ
     return $points;
   }
 
+  /**
+   * An easy way to apply sitewide filtering to data points before returning.
+   *
+   * @param array $points
+   *   The array of data points.
+   */
+  public function alterPoints(array $points, CidocEntityInterface $entity) {
+    $this->moduleHandler->alter('cidoc_geoserializer_points', $points, $entity);
+
+    return $points;
+  }
+
 }
