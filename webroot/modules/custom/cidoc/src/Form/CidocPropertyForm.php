@@ -53,11 +53,13 @@ class CidocPropertyForm extends EntityForm {
       $has_data_range[$bundle_id] = (bool) \Drupal::entityQuery('cidoc_reference')
         ->condition('property', $cidoc_property->id())
         ->condition('range.entity:cidoc_entity.bundle', $bundle_id)
+        ->accessCheck(FALSE)
         ->count()
         ->execute();
       $has_data_domain[$bundle_id] = (bool) \Drupal::entityQuery('cidoc_reference')
         ->condition('property', $cidoc_property->id())
         ->condition('domain.entity:cidoc_entity.bundle', $bundle_id)
+        ->accessCheck(FALSE)
         ->count()
         ->execute();
     }
@@ -292,9 +294,9 @@ class CidocPropertyForm extends EntityForm {
         'class' => array('cidoc-property-form-items-columns'),
       ),
     );
-    foreach ($form['endpoints']['child_events']['#options'] as $endpoint => $endpoint_label) {
+    foreach ($form['endpoints']['child']['child_events']['#options'] as $endpoint => $endpoint_label) {
       if ($cidoc_property->isChildEvents($endpoint)) {
-        $form['endpoints']['child_events']['#default_value'][] = $endpoint;
+        $form['endpoints']['child']['child_events']['#default_value'][] = $endpoint;
       }
     }
 
