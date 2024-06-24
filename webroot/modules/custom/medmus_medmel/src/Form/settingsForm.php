@@ -67,26 +67,26 @@ class settingsForm extends \Drupal\Core\Form\ConfigFormBase {
       '#description' => $this->t('This will be used for the iframe embed URL when there are multiple related pieces of music.'),
     ];
 
-    $form['certName'] = [
-      '#type' => 'textfield',
-      '#title' => $this->t('Certificate name'),
-      '#default_value' => $config->get('certName'),
-      '#description' => $this->t('Name of the uploaded .pem file.'),
-    ];
-
-    $form['cert'] = [
-      '#type' => 'managed_file',
-      '#name' => 'custom_certificates',
-      '#title' => $this->t('Certificate'),
-      '#size' => 100,
-      '#default_value' => $config->get('defaultCertificate'),
-      '#description' => $this->t('Here you can upload a certificate in case the curl request throws an Error 60.'),
-      '#upload_location' => 'private://certificates',
-      '#upload_validators' => array(
-        'file_validate_extensions' => array('pem'),
-        'file_validate_size' => array(1024*1024)
-      )
-    ];
+//    $form['certName'] = [
+//      '#type' => 'textfield',
+//      '#title' => $this->t('Certificate name'),
+//      '#default_value' => $config->get('certName'),
+//      '#description' => $this->t('Name of the uploaded .pem file.'),
+//    ];
+//
+//    $form['cert'] = [
+//      '#type' => 'managed_file',
+//      '#name' => 'custom_certificates',
+//      '#title' => $this->t('Certificate'),
+//      '#size' => 100,
+//      '#default_value' => $config->get('defaultCertificate'),
+//      '#description' => $this->t('Here you can upload a certificate in case the curl request throws an Error 60.'),
+//      '#upload_location' => 'private://certificates',
+//      '#upload_validators' => array(
+//        'file_validate_extensions' => array('pem'),
+//        'file_validate_size' => array(1024*1024)
+//      )
+//    ];
 
     return parent::buildForm($form, $form_state);
   }
@@ -102,8 +102,8 @@ class settingsForm extends \Drupal\Core\Form\ConfigFormBase {
       ->set('iframeHeight', $form_state->getValue('iframeHeight'))
       ->set('embedUrl', $form_state->getValue('embedUrl'))
       ->set('multipleEmbedUrl', $form_state->getValue('multipleEmbedUrl'))
-      ->set('certName', $form_state->getValue('certName'))
-      ->set('cert', $form_state->getValue('cert'))
+//      ->set('certName', $form_state->getValue('certName'))
+//      ->set('cert', $form_state->getValue('cert'))
       ->save();
 
     parent::submitForm($form, $form_state);

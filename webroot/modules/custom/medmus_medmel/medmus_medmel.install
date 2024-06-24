@@ -25,7 +25,7 @@ function medmus_medmel_schema() {
       ],
       'ms' => [
         'description' => 'The ms.',
-        'type' => 'varchar_ascii',
+        'type' => 'varchar',
         'length' => 255,
         'not null' => TRUE,
         'default' => '',
@@ -49,4 +49,17 @@ function medmus_medmel_update_8101(&$sandbox) {
   /** @var \Drupal\Core\Config\StorageInterface $active_storage */
   $active_storage = \Drupal::service('config.storage');
   $active_storage->write($name, $source->read($name));
+}
+
+/**
+ * Implements hook_update_N().
+ */
+function medmus_medmel_update_8102() {
+  \Drupal::database()->schema()->changeField('medmus_medmel', 'ms', 'ms', [
+    'description' => 'The ms.',
+    'type' => 'varchar',
+    'length' => 255,
+    'not null' => TRUE,
+    'default' => '',
+  ]);
 }

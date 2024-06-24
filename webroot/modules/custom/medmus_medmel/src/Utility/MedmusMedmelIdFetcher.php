@@ -67,10 +67,11 @@ class MedmusMedmelIdFetcher implements ContainerInjectionInterface {
 
     try {
       $directory = \Drupal::service('file_system')->realpath("private://");
-      $certName = $config->get('certName');
-      $cert = $directory."/certificates/".$certName;
+//      $certName = $config->get('certName');
+//      $cert = $directory."/certificates/".$certName;
       // Fetch the IDs, and make our DB table look like the JSON.
-      $request = $this->httpClient->request('GET', $config->get('fetchUrl'), ["verify" => $cert]);
+      //$request = $this->httpClient->request('GET', $config->get('fetchUrl'), ["verify" => $cert]);
+      $request = $this->httpClient->request('GET', $config->get('fetchUrl'));
 
       if ($request->getStatusCode() != 200) {
         $this->logger->error('Got error code: @code', [
@@ -95,6 +96,7 @@ class MedmusMedmelIdFetcher implements ContainerInjectionInterface {
           $insert->execute();
           // Commit our transaction.
           unset($transaction);
+          $this->logger->info('Updated music list from Medmel');
 
           // Now we should try to find entities that match these items and invalidate their cache tags.
         }
