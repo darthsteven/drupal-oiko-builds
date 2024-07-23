@@ -1,7 +1,14 @@
-Oiko
+MedMus
 ====
 
-[![Build Status](https://jenkins.computerminds.co.uk/buildStatus/icon?job=Oiko - Functional Testing - Site Install)](https://jenkins.computerminds.co.uk/job/Oiko - Functional Testing - Site Install)
+Codespaces
+----------
+
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/digihum/drupal-oiko-builds/tree/feature/medmus-d8-codespace)
+
+To use in Codespaces: 
+
+1. Add your database sql to the `/docker/seed/` folder and change the filename in the `docker/docker-compose.yml`
 
 Getting started for developers
 ------------------------------
