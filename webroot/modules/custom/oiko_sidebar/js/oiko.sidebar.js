@@ -55,13 +55,6 @@
               Drupal.oiko.openSidebar(id);
             }
           });
-          $(context).find('.js-sidebar__expand').once('js-sidebar__expand').each(function () {
-            $(this).on('change', function() {
-              $content.toggleClass('sidebar--very-expanded', $('input[type="checkbox"]', this).is(':checked'));
-              // Need to let any components that care react too.
-              window.dispatchEvent(new Event('resize'));
-            });
-          });
         }
       });
     }
@@ -101,6 +94,7 @@
     // Display the main information.
     var element_settings = {};
     element_settings.progress = {type: 'none'};
+
     // For anchor tags, these will go to the target of the anchor rather
     // than the usual location.
     element_settings.url = '/cidoc-entity/' + id + '/popup';
@@ -111,6 +105,23 @@
         $(window).trigger('oikoSidebarOpened', id);
       })
       .fail(errorcb);
+
+    // Load in the discussion content.
+    // var discussion_element_settings = {};
+    // discussion_element_settings.progress = {type: 'none'};
+    //
+    // // For anchor tags, these will go to the target of the anchor rather
+    // // than the usual location.
+    // discussion_element_settings.url = '/discussion/' + id + '/popup';
+    // discussion_element_settings.oikoLeafletHistoryState = false;
+    // Drupal.ajax(discussion_element_settings).execute();
+    //
+    // // Load in the social links.
+    // var social_element_settings = {};
+    // social_element_settings.progress = {type: 'none'};
+    // social_element_settings.url = '/share/' + id + '/popup';
+    // social_element_settings.oikoLeafletHistoryState = false;
+    // Drupal.ajax(social_element_settings).execute();
   };
 
   /**

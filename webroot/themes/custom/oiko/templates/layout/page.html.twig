@@ -43,25 +43,41 @@
  * @see html.html.twig
  */
 #}
-<div id="main" role="main" class="clearfix l-main page--scroll">
+<div id="main" role="main" class="clearfix l-main page--scroll page-style">
     <div class="oiko-sidebar mobile-only">
         {% include '@oiko/layout/header--mobile.html.twig' %}
     </div>
-    <div class="l-sidebar oiko-sidebar desktop-only">
-        <div class="l-sidebar-upper">
+    <div class="l-sidebar oiko-sidebar desktop-only" style="position:relative">
+        <div class="l-sidebar-upper" >
+         <div class="container">
             {% include '@oiko/layout/header.html.twig' %}
             {{ page.sidebar_upper }}
-            <ul class="sidebar-tabs tabs vertical">
-                <li class="tabs-title"><a href="#" data-pane-id="main-menu"><i class="fa fa-bars" title="Main menu"></i></a></li>
-                <li class="tabs-title"><a href="#" data-pane-id="legend" class="js-legend-tab-link disabled"><i class="fa fa-filter" title="Legend"></i></a></li>
-                <li class="tabs-title"><a href="#" data-pane-id="information" class="disabled"><i class="fa fa-map-marker" title="Information"></i></a></li>
-            </ul>
+            <div class="header-left">
+              <ul class="sidebar-tabs tabs">
+                  <li class="tabs-title"><a href="#" data-pane-id="main-menu"><i class="fas fa-bars" title="Main menu"></i></a></li>
+                  <li class="tabs-title" style="display:none"><a href="#" data-pane-id="information" class="disabled"><i class="fa fa-map-marker" title="Information"></i></a></li>
+              </ul>
+              <h2>Prosopographical Atlas of <b>Romance Literature</b></h2>
+            </div>
+            <div class="logo">
+              <a href="https://www.uniroma1.it/" target="_blank">
+                  <img src="/themes/custom/oiko/images/logo.png" class="logo sapienza" alt="&copy; Sapienza University" title="&copy; Sapienza University">
+              </a>
+            </div>
+         </div>
+         <div class="page-menu"></div>
+         <div class="banner-img">
+
+
+         </div>
         </div>
-        <div class="l-sidebar-lower">
+
+        <div class="l-sidebar-lower" style="display:none">
             {{ page.sidebar_lower }}
             {% include '@oiko/layout/footer.html.twig' %}
         </div>
     </div>
+
     <div class="l-content-container">
         <div class="l-content-header desktop-only">
             <div></div>
@@ -71,13 +87,14 @@
             <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
             {% include '@oiko/layout/sidebar-content.html.twig' %}
 
-            <div class="oiko-app">
+            <div class="oiko-app ">
                 <div class="page-scroll-container">
-                    <main role="main" class="l-content-grid-container">
+                    <main role="main" class="">
                         <div class="l-full">
-                            {{ page.breadcrumb }}
+
 
                             {{ page.highlighted }}
+
 
                             <a id="main-content" tabindex="-1"></a>{# link is in html.html.twig #}
                             {{ page.content }}

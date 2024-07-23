@@ -49,22 +49,61 @@
     </div>
     <div class="l-sidebar oiko-sidebar desktop-only">
         <div class="l-sidebar-upper">
+         <div class="container">
             {% include '@oiko/layout/header.html.twig' %}
             {{ page.sidebar_upper }}
-            <ul class="sidebar-tabs tabs vertical">
-                <li class="tabs-title"><a href="#" data-pane-id="main-menu"><i class="fa fa-bars" title="Main menu"></i></a></li>
-                <li class="tabs-title"><a href="#" data-pane-id="legend"><i class="fa fa-filter" title="Legend"></i></a></li>
-                <li class="tabs-title"><a href="#" data-pane-id="information" class="disabled"><i class="fa fa-map-marker" title="Information"></i></a></li>
-            </ul>
+            <div class="header-left">
+              <ul class="sidebar-tabs tabs">
+                  <li class="tabs-title"><a href="#" data-pane-id="main-menu"><i class="fas fa-bars" title="Main menu"></i></a></li>
+                  <li class="tabs-title" style="display:none"><a href="#" data-pane-id="information" class="disabled"><i class="fa fa-map-marker" title="Information"></i></a></li>
+              </ul>
+              <h2>Prosopographical Atlas of <b>Romance Literature</b></h2>
+            </div>
+            <div class="logo">
+              <a href="https://www.uniroma1.it/" target="_blank">
+                  <img src="/themes/custom/oiko/images/logo.png" class="logo sapienza" alt="&copy; Sapienza University" title="&copy; Sapienza University">
+              </a>
+            </div>
+         </div>
         </div>
-        <div class="l-sidebar-lower">
+        <div class="l-sidebar-menu">
+         <div class="container">
+         <div id="block-medmus-maplegendblock">
+             <ul class="map-legend-icons js-map-legend-filterable-widget">
+              <li data-legend-category="3"><label for="map-legend[3]">
+              &nbsp;Cultural&nbsp;<img src="/modules/custom/oiko_leaflet/images/icon-green.png" alt="A Cultural marker" typeof="foaf:Image"></label></li>
+              <li data-legend-category="5"><label for="map-legend[5]">
+              &nbsp;Economic&nbsp;<img src="/modules/custom/oiko_leaflet/images/icon-turquoise.png" alt="A Economic marker" typeof="foaf:Image"></label></li>
+              <li data-legend-category="4"><label for="map-legend[4]">
+              &nbsp;Military&nbsp;<img src="/modules/custom/oiko_leaflet/images/icon-red.png" alt="A Military marker" typeof="foaf:Image"></label></li>
+              <li data-legend-category="6"><label for="map-legend[6]">
+              &nbsp;Political&nbsp;<img src="/modules/custom/oiko_leaflet/images/icon-purple.png" alt="A Political marker" typeof="foaf:Image"></label></li>
+              <li data-legend-category="1"><label for="map-legend[1]">
+              &nbsp;Religious&nbsp;<img src="/modules/custom/oiko_leaflet/images/icon-yellow.png" alt="A Religious marker" typeof="foaf:Image"></label></li>
+              <li data-legend-category="0"><label for="map-legend[0]">
+              &nbsp;Other&nbsp;<img src="/modules/custom/oiko_leaflet/images/icon-blue.png" alt="" typeof="foaf:Image"></label></li>
+            </ul>
+            <ul class="map-legend-features no-bullet hide-on-timeline"><li><img class="map-legend-features--image" src="/modules/custom/oiko_leaflet/images/features/marker.png" alt="Example of a marker feature" typeof="foaf:Image">
+              Events at a specific location are marked on the map using coloured markers like this on. Hover, tap or click to see more information about the event at the location.</li><li><img class="map-legend-features--image" src="/modules/custom/oiko_leaflet/images/features/cluster.png" alt="Example of a cluster feature" typeof="foaf:Image">
+              When more than one event is happening in the same place, or you need to zoom in to see them they are grouped together like this. Tap or click to reveal the events that have been grouped together.</li><li><img class="map-legend-features--image" src="/modules/custom/oiko_leaflet/images/features/path.png" alt="Example of a path feature" typeof="foaf:Image">
+              Events that are moving something are indicated with lines. If we know the direction of travel then arrows will additionally be placed on the line.</li><li><img class="map-legend-features--image" src="/modules/custom/oiko_leaflet/images/features/area.png" alt="Example of a area feature" typeof="foaf:Image">
+              If an event took place over an area, then we'll show it as a translucent area. Hover, tap or click to see more information about the event.</li><li><img class="map-legend-features--image" src="/modules/custom/oiko_leaflet/images/features/empire.png" alt="Example of a empire feature" typeof="foaf:Image">
+              Global Empires are shown as coloured areas with stripes. Hover or tap for a tooltip with the information for the Empire.</li>
+            </ul>
+          </div>
+          {{ page.search_header }}
+         </div>
+        </div>
+        <div class="l-sidebar-lower" style="display:none">
             {{ page.sidebar_lower }}
             {% include '@oiko/layout/footer.html.twig' %}
         </div>
     </div>
-    <div class="l-content-container">
+    <div class="home-menu">
+    </div>
+    <div class="l-content-container" style="margin-top:-100px">
         <div class="l-content-header desktop-only">
-            {{ page.search_header }}
+
             {{ page.user_header }}
         </div>
         <div class="l-main-content">
@@ -72,6 +111,11 @@
             {% include '@oiko/layout/sidebar-content.html.twig' %}
             {{ page.highlighted }}
             {{ page.content }}
+            {% include '@oiko/layout/footer.html.twig' %}
         </div>
     </div>
 </div><!-- #main -->
+
+<div class="help sb9">
+ <p>Double click on the timeline and move the bar</p>
+</div>
