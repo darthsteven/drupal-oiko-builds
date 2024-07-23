@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.content_page.body
-    - field.field.node.content_page.field_file
     - node.type.content_page
   module:
-    - file
     - text
     - user
 id: node.content_page.default
@@ -22,18 +20,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_file:
-    weight: 102
-    label: above
-    settings:
-      use_description_as_link_text: true
-    third_party_settings: {  }
-    type: file_default
-    region: content
   links:
     weight: 100
     region: content
     settings: {  }
     third_party_settings: {  }
 hidden:
+  langcode: true
   search_api_excerpt: true

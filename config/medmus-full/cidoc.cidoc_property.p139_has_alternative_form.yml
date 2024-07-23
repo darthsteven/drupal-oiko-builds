@@ -12,14 +12,10 @@ domain_bundles:
   - e35_title
   - e41_appellation
   - e42_identifier
-  - ec4_syllabic_scheme
-  - ec5_rhyme_scheme
 range_bundles:
   - e35_title
   - e41_appellation
   - e42_identifier
-  - ec4_syllabic_scheme
-  - ec5_rhyme_scheme
 editability:
   domain: true
   range: true
@@ -29,7 +25,7 @@ timesubwidget:
   range:
     type: 'no'
 widget_description:
-  domain: ''
+  domain: "\r\n"
   range: ''
 autocomplete_description:
   domain: ''

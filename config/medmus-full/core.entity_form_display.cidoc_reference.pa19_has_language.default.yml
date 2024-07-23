@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pa19_has_language.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pa19_has_language.default
 targetEntityType: cidoc_reference
 bundle: pa19_has_language

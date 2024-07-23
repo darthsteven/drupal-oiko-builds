@@ -2,9 +2,38 @@ uuid: 53c3f1ab-6670-4feb-814f-ff6919f48f5f
 langcode: en
 status: true
 dependencies:
+  config:
+    - cidoc.cidoc_entity_bundle.e12_production
+    - cidoc.cidoc_entity_bundle.e21_person
+    - cidoc.cidoc_entity_bundle.e35_title
+    - cidoc.cidoc_entity_bundle.e41_appellation
+    - cidoc.cidoc_entity_bundle.e42_identifier
+    - cidoc.cidoc_entity_bundle.e52_time_span
+    - cidoc.cidoc_entity_bundle.e53_place
+    - cidoc.cidoc_entity_bundle.e55_type
+    - cidoc.cidoc_entity_bundle.e56_language
+    - cidoc.cidoc_entity_bundle.e57_material
+    - cidoc.cidoc_entity_bundle.e5_event
+    - cidoc.cidoc_entity_bundle.e65_creation
+    - cidoc.cidoc_entity_bundle.e66_formation
+    - cidoc.cidoc_entity_bundle.e67_birth
+    - cidoc.cidoc_entity_bundle.e6_destruction
+    - cidoc.cidoc_entity_bundle.e74_group
+    - cidoc.cidoc_entity_bundle.e7_activity
+    - cidoc.cidoc_entity_bundle.e85_joining
+    - cidoc.cidoc_entity_bundle.e9_move
+    - cidoc.cidoc_entity_bundle.ec10_marriage
+    - cidoc.cidoc_entity_bundle.ec11_melodic_scheme
+    - cidoc.cidoc_entity_bundle.ec1_work
+    - cidoc.cidoc_entity_bundle.ec2_genre
+    - cidoc.cidoc_entity_bundle.ec3_formal_feature
+    - cidoc.cidoc_entity_bundle.ec4_syllabic_scheme
+    - cidoc.cidoc_entity_bundle.ec5_rhyme_scheme
+    - cidoc.cidoc_entity_bundle.ec6_music
+    - cidoc.cidoc_entity_bundle.ec8_manuscript
+    - system.menu.main
   module:
     - cidoc
-    - text
 id: advanced_search_for_users
 label: 'Advanced Search for Users'
 module: views
@@ -44,12 +73,17 @@ display:
           sort_asc_label: Asc
           sort_desc_label: Desc
       pager:
-        type: mini
+        type: full
         options:
           items_per_page: 50
           offset: 0
           id: 0
           total_pages: null
+          tags:
+            previous: ‹‹
+            next: ››
+            first: '« First'
+            last: 'Last »'
           expose:
             items_per_page: false
             items_per_page_label: 'Items per page'
@@ -58,9 +92,7 @@ display:
             items_per_page_options_all_label: '- All -'
             offset: false
             offset_label: Offset
-          tags:
-            previous: ‹‹
-            next: ››
+          quantity: 9
       style:
         type: table
         options:
@@ -75,38 +107,32 @@ display:
           columns:
             bundle: bundle
             name: name
-            content_value: content_value
-            internal_name: internal_name
-            name_1: name_1
+            user_id: user_id
+            revision_user_id: revision_user_id
           info:
             bundle:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
             name:
-              sortable: false
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            content_value:
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            internal_name:
-              sortable: false
+            user_id:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
               empty_column: false
               responsive: ''
-            name_1:
-              sortable: false
+            revision_user_id:
+              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -125,7 +151,7 @@ display:
           group_type: group
           admin_label: ''
           label: 'CIDOC-CRM Class'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -254,15 +280,15 @@ display:
           entity_type: cidoc_entity
           entity_field: name
           plugin_id: field
-        content_value:
-          id: content_value
-          table: cidoc_entity__content
-          field: content_value
+        user_id:
+          id: user_id
+          table: cidoc_entity_revision
+          field: user_id
           relationship: none
           group_type: group
           admin_label: ''
-          label: Content
-          exclude: true
+          label: 'Authored by'
+          exclude: false
           alter:
             alter_text: false
             text: ''
@@ -298,79 +324,15 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: ''
+          empty: 'Connecting Medieval Music'
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          click_sort_column: value
-          type: text_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: cidoc_entity
-          entity_field: content
-          plugin_id: field
-        internal_name:
-          id: internal_name
-          table: cidoc_entity
-          field: internal_name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'Internal name'
-          exclude: true
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: string
+          click_sort_column: target_id
+          type: entity_reference_label
           settings:
-            link_to_entity: false
-          group_column: value
+            link: true
+          group_column: target_id
           group_columns: {  }
           group_rows: true
           delta_limit: 0
@@ -381,7 +343,72 @@ display:
           separator: ', '
           field_api_classes: false
           entity_type: cidoc_entity
-          entity_field: internal_name
+          entity_field: user_id
+          plugin_id: field
+        revision_user_id:
+          id: revision_user_id
+          table: cidoc_entity_revision
+          field: revision_user_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          label: 'Revision user'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          entity_type: cidoc_entity
+          entity_field: revision_user_id
           plugin_id: field
       filters:
         status:
@@ -397,26 +424,26 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-        bundle:
-          id: bundle
-          table: cidoc_entity
-          field: bundle
+        combine:
+          id: combine
+          table: views
+          field: combine
           relationship: none
           group_type: group
           admin_label: ''
-          operator: in
-          value: {  }
+          operator: contains
+          value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: bundle_op
-            label: Class
+            operator_id: combine_op
+            label: 'Search in original language (Guillem IX, Paris, Roma) but County of Poitiers, Kingdom of England'
             description: ''
-            use_operator: false
-            operator: bundle_op
+            use_operator: true
+            operator: combine_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: bundle
+            identifier: combine
             required: false
             remember: false
             multiple: false
@@ -429,11 +456,96 @@ display:
               moderator: '0'
               moderated_contributor: '0'
               pure_html_user: '0'
-            reduce: false
-          is_grouped: true
+              replicator: '0'
+            placeholder: ''
+          is_grouped: false
           group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          fields:
+            bundle: bundle
+            name: name
+            user_id: user_id
+            revision_user_id: revision_user_id
+          plugin_id: combine
+        bundle:
+          id: bundle
+          table: cidoc_entity
+          field: bundle
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: in
+          value:
+            e12_production: e12_production
+            e21_person: e21_person
+            e35_title: e35_title
+            e41_appellation: e41_appellation
+            e42_identifier: e42_identifier
+            e5_event: e5_event
+            e52_time_span: e52_time_span
+            e53_place: e53_place
+            e55_type: e55_type
+            e56_language: e56_language
+            e57_material: e57_material
+            e6_destruction: e6_destruction
+            e65_creation: e65_creation
+            e66_formation: e66_formation
+            e67_birth: e67_birth
+            e7_activity: e7_activity
+            e74_group: e74_group
+            e85_joining: e85_joining
+            e9_move: e9_move
+            ec1_work: ec1_work
+            ec10_marriage: ec10_marriage
+            ec11_melodic_scheme: ec11_melodic_scheme
+            ec2_genre: ec2_genre
+            ec3_formal_feature: ec3_formal_feature
+            ec4_syllabic_scheme: ec4_syllabic_scheme
+            ec5_rhyme_scheme: ec5_rhyme_scheme
+            ec6_music: ec6_music
+            ec8_manuscript: ec8_manuscript
+            '--all-events--': '--all-events--'
+            '--all-main--': '--all-main--'
+          group: 1
+          exposed: true
+          expose:
+            operator_id: bundle_op
             label: Class
             description: ''
+            use_operator: true
+            operator: bundle_op
+            operator_limit_selection: true
+            operator_list:
+              in: in
+              'not in': 'not in'
+            identifier: bundle
+            required: false
+            remember: false
+            multiple: true
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              content_editor: '0'
+              forum_user: '0'
+              moderator: '0'
+              moderated_contributor: '0'
+              pure_html_user: '0'
+              replicator: '0'
+            reduce: true
+          is_grouped: false
+          group_info:
+            label: Class
+            description: 'If you want an alphabetical list of Persons, Works, Types, Places, Activities, select the Class and Apply'
             identifier: bundle
             optional: false
             widget: select
@@ -446,42 +558,42 @@ display:
                 title: All
                 operator: in
                 value:
+                  all: all
+                  e12_production: e12_production
+                  e21_person: e21_person
+                  e35_title: e35_title
+                  e41_appellation: e41_appellation
+                  e42_identifier: e42_identifier
+                  e5_event: e5_event
+                  e52_time_span: e52_time_span
+                  e53_place: e53_place
+                  e55_type: e55_type
+                  e56_language: e56_language
+                  e57_material: e57_material
+                  e6_destruction: e6_destruction
+                  e65_creation: e65_creation
+                  e66_formation: e66_formation
+                  e67_birth: e67_birth
+                  e68_dissolution: e68_dissolution
+                  e69_death: e69_death
+                  e7_activity: e7_activity
+                  e74_group: e74_group
+                  e85_joining: e85_joining
+                  e86_leaving: e86_leaving
+                  e9_move: e9_move
+                  ec1_work: ec1_work
+                  ec10_marriage: ec10_marriage
+                  ec11_melodic_scheme: ec11_melodic_scheme
+                  ec2_genre: ec2_genre
+                  ec3_formal_feature: ec3_formal_feature
+                  ec4_syllabic_scheme: ec4_syllabic_scheme
+                  ec5_rhyme_scheme: ec5_rhyme_scheme
+                  ec6_music: ec6_music
+                  ec7_source: ec7_source
+                  ec8_manuscript: ec8_manuscript
+                  ec9_print: ec9_print
                   '--all-events--': '--all-events--'
-                  all: '0'
-                  e12_production: '0'
-                  e21_person: '0'
-                  e35_title: '0'
-                  e41_appellation: '0'
-                  e42_identifier: '0'
-                  e5_event: '0'
-                  e52_time_span: '0'
-                  e53_place: '0'
-                  e55_type: '0'
-                  e56_language: '0'
-                  e57_material: '0'
-                  e6_destruction: '0'
-                  e65_creation: '0'
-                  e66_formation: '0'
-                  e67_birth: '0'
-                  e68_dissolution: '0'
-                  e69_death: '0'
-                  e7_activity: '0'
-                  e74_group: '0'
-                  e85_joining: '0'
-                  e86_leaving: '0'
-                  e9_move: '0'
-                  ec1_work: '0'
-                  ec10_marriage: '0'
-                  ec11_melodic_scheme: '0'
-                  ec2_genre: '0'
-                  ec3_formal_feature: '0'
-                  ec4_syllabic_scheme: '0'
-                  ec5_rhyme_scheme: '0'
-                  ec6_music: '0'
-                  ec7_source: '0'
-                  ec8_manuscript: '0'
-                  ec9_print: '0'
-                  '--all-main--': '0'
+                  '--all-main--': '--all-main--'
               2:
                 title: Activity
                 operator: in
@@ -1685,27 +1797,30 @@ display:
           entity_type: cidoc_entity
           entity_field: bundle
           plugin_id: cidoc_bundle
-        combine:
-          id: combine
-          table: views
-          field: combine
+        user_id:
+          id: user_id
+          table: cidoc_entity
+          field: user_id
           relationship: none
           group_type: group
           admin_label: ''
-          operator: contains
-          value: ''
+          operator: '='
+          value:
+            min: ''
+            max: ''
+            value: ''
           group: 1
           exposed: true
           expose:
-            operator_id: combine_op
-            label: Search
+            operator_id: user_id_op
+            label: 'Authored by (search by ID number)'
             description: ''
             use_operator: false
-            operator: combine_op
+            operator: user_id_op
             operator_limit_selection: false
             operator_list: {  }
-            identifier: combine
-            required: true
+            identifier: user_id
+            required: false
             remember: false
             multiple: false
             remember_roles:
@@ -1717,24 +1832,61 @@ display:
               moderator: '0'
               moderated_contributor: '0'
               pure_html_user: '0'
+              replicator: '0'
             placeholder: ''
+            min_placeholder: ''
+            max_placeholder: ''
           is_grouped: false
           group_info:
-            label: ''
+            label: 'Authored by'
             description: ''
-            identifier: ''
+            identifier: user_id
             optional: true
             widget: select
             multiple: false
             remember: false
             default_group: All
             default_group_multiple: {  }
-            group_items: {  }
-          fields:
-            name: name
-            internal_name: internal_name
-          plugin_id: combine
+            group_items:
+              1:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+              2:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+              3:
+                title: ''
+                operator: '='
+                value:
+                  value: ''
+                  min: ''
+                  max: ''
+          entity_type: cidoc_entity
+          entity_field: user_id
+          plugin_id: numeric
       sorts:
+        name:
+          id: name
+          table: cidoc_entity_revision
+          field: name
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: true
+          expose:
+            label: Name
+          entity_type: cidoc_entity
+          entity_field: name
+          plugin_id: standard
         bundle:
           id: bundle
           table: cidoc_entity
@@ -1743,140 +1895,17 @@ display:
           group_type: group
           admin_label: ''
           order: ASC
-          exposed: false
+          exposed: true
           expose:
             label: Class
           entity_type: cidoc_entity
           entity_field: bundle
           plugin_id: standard
-        name:
-          id: name
-          table: cidoc_entity
-          field: name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          order: ASC
-          exposed: false
-          expose:
-            label: ''
-          entity_type: cidoc_entity
-          entity_field: name
-          plugin_id: standard
-      title: 'Advanced search'
+      title: Search
       header: {  }
       footer: {  }
       empty: {  }
-      relationships:
-        related_entities:
-          id: related_entities
-          table: cidoc_entity
-          field: related_entities
-          relationship: none
-          group_type: group
-          admin_label: 'Forward references'
-          required: false
-          limit_bundles:
-            p1_is_identified_by: p1_is_identified_by
-            p48_has_preferred_identifier: p48_has_preferred_identifier
-            p87_is_identified_by: p87_is_identified_by
-            p102_has_title: p102_has_title
-            p131_is_identified_by: p131_is_identified_by
-            p2_has_type: 0
-            p4_has_time_span: 0
-            p7_took_place_at: 0
-            p9_consists_of: 0
-            p10_falls_within: 0
-            p11_had_participant: 0
-            p12_occurred_in_the_presence_of: 0
-            p13_destroyed: 0
-            p14_carried_out_by: 0
-            p26_moved_to: 0
-            p27_moved_from: 0
-            p45_consists_of: 0
-            p67_refers_to: 0
-            p89_falls_within: 0
-            p94_has_created: 0
-            p95_has_formed: 0
-            p96_by_mother: 0
-            p97_from_father: 0
-            p98_brought_into_life: 0
-            p99_dissolved: 0
-            p100_was_death_of: 0
-            p108_has_produced: 0
-            p128_carries: 0
-            p134_continued: 0
-            p139_has_alternative_form: 0
-            p143_joined: 0
-            p144_joined_with: 0
-            p145_separated: 0
-            p146_separated_from: 0
-            pa1_has_patron: 0
-            pa2_has_acquaintance: 0
-            pa3_has_friend: 0
-            pa4_has_muse: 0
-            pa5_has_lover: 0
-            pa6_has_murder_victim: 0
-            pa7_has_sibling: 0
-            pa8_has_cousin: 0
-            pa9_has_aunt_or_uncle: 0
-            pa10_has_grandchild: 0
-            pa11_has_ancestor: 0
-            pa12_has_adoptive_child: 0
-            pa13_has_illegitimate_child: 0
-            pa14_has_relative: 0
-            pa15_has_child-in-law: 0
-            pa16_has_sibling-in-law: 0
-            pa17_has_godfather: 0
-            pa18_has_godmother: 0
-            pa19_has_language: 0
-            pc1_has_metrical_affinities_with: 0
-            pc2_is_contrafactum_of: 0
-            pc3_has_genre: 0
-            pc4_has_formal_feature: 0
-            pc5_has_expression: 0
-            pc6_has_alternative_attribution: 0
-            pc7_has_music: 0
-            pc8_has_syllabic_scheme: 0
-            pc9_has_rhyme_scheme: 0
-            pc10_has_melodic_scheme: 0
-            pc11_has_spouse: 0
-          limit_types:
-            e5_event: 0
-            e6_destruction: 0
-            e7_activity: 0
-            e9_move: 0
-            e12_production: 0
-            e21_person: 0
-            e35_title: 0
-            e41_appellation: 0
-            e42_identifier: 0
-            e52_time_span: 0
-            e53_place: 0
-            e55_type: 0
-            e56_language: 0
-            e57_material: 0
-            e65_creation: 0
-            e66_formation: 0
-            e67_birth: 0
-            e68_dissolution: 0
-            e69_death: 0
-            e74_group: 0
-            e85_joining: 0
-            e86_leaving: 0
-            ec1_work: 0
-            ec2_genre: 0
-            ec3_formal_feature: 0
-            ec4_syllabic_scheme: 0
-            ec5_rhyme_scheme: 0
-            ec6_music: 0
-            ec7_source: 0
-            ec8_manuscript: 0
-            ec9_print: 0
-            ec10_marriage: 0
-            ec11_melodic_scheme: 0
-          entity_type: cidoc_entity
-          plugin_id: cidoc_related_entity_forward
+      relationships: {  }
       arguments:
         id:
           id: id
@@ -1917,6 +1946,11 @@ display:
           plugin_id: numeric
       display_extenders: {  }
       group_by: false
+      filter_groups:
+        operator: AND
+        groups:
+          1: AND
+      css_class: search
     cache_metadata:
       max-age: -1
       contexts:
@@ -1924,6 +1958,8 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags: {  }
   page_1:
     display_plugin: page
@@ -1933,6 +1969,16 @@ display:
     display_options:
       display_extenders: {  }
       path: search
+      menu:
+        type: normal
+        title: Search
+        description: ''
+        expanded: false
+        parent: ''
+        weight: -49
+        context: '0'
+        menu_name: main
+        enabled: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -1940,4 +1986,6 @@ display:
         - 'languages:language_interface'
         - url
         - url.query_args
+        - 'url.query_args:sort_by'
+        - 'url.query_args:sort_order'
       tags: {  }

@@ -228,7 +228,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '&nbsp;{{field_title_long}}'
+            text: '{{field_title_long}}'
             make_link: false
             path: ''
             absolute: false
@@ -615,7 +615,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '&nbsp;({{field_title_long|trim|raw}})'
+            text: '({{field_title_long|trim|raw}})'
             make_link: false
             path: ''
             absolute: false

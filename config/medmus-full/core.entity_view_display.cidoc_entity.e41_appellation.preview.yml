@@ -63,6 +63,11 @@ content:
     settings: {  }
     weight: 4
     third_party_settings: {  }
+  entity_change_entity_view_1:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   internal_name:
     region: content
     type: string

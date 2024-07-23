@@ -479,7 +479,21 @@ display:
           id: name
           table: cidoc_entity
           field: name
-          relationship: related_entities_1
+          relationship: related_entities_2
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: Name
+          entity_type: cidoc_entity
+          entity_field: name
+          plugin_id: standard
+        name_1:
+          id: name_1
+          table: cidoc_entity
+          field: name
+          relationship: none
           group_type: group
           admin_label: ''
           order: ASC

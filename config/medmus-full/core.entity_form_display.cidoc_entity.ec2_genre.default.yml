@@ -17,7 +17,7 @@ third_party_settings:
       children:
         - content
       parent_name: group_main_deets
-      weight: 9
+      weight: 8
       label: 'Descriptive text'
       format_type: fieldset
       format_settings:
@@ -48,7 +48,6 @@ third_party_settings:
         - internal_name
         - citation
         - 'cidoc_properties:range:pc3_has_genre'
-        - 'cidoc_properties:domain:p2_has_type'
         - 'cidoc_properties:domain:p1_is_identified_by'
         - 'cidoc_properties:domain:p48_has_preferred_identifier'
         - 'cidoc_properties:range:p94_has_created'
@@ -143,7 +142,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:p1_is_identified_by':
-    weight: 6
+    weight: 5
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -162,13 +161,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  'cidoc_properties:domain:p2_has_type':
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   'cidoc_properties:domain:p48_has_preferred_identifier':
-    weight: 7
+    weight: 6
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -253,7 +247,7 @@ content:
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:range:p94_has_created':
-    weight: 8
+    weight: 7
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -325,6 +319,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 1
@@ -379,6 +380,7 @@ content:
     third_party_settings: {  }
 hidden:
   'cidoc_properties:domain:p102_has_title': true
+  'cidoc_properties:domain:p2_has_type': true
   'cidoc_properties:range:p12_occurred_in_the_presence_of': true
   'cidoc_properties:range:p132_overlaps_with': true
   'cidoc_properties:range:p133_is_separated_from': true

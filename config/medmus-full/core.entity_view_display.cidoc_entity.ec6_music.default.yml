@@ -34,6 +34,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:domain:pc10_has_melodic_scheme':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   'cidoc_properties:domain:pc5_has_expression':
     weight: 9
     region: content
@@ -69,6 +74,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  has_music_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   internal_name:
     label: inline
     type: string
@@ -97,6 +107,7 @@ hidden:
   cidoc_temporal_summary: true
   citation: true
   content: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   significance: true

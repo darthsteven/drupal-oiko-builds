@@ -9,7 +9,7 @@ dependencies:
 id: oiko_page_title
 theme: oiko
 region: content
-weight: -12
+weight: -6
 provider: null
 plugin: page_title_block
 settings:

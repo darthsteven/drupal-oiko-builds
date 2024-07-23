@@ -6,7 +6,6 @@ dependencies:
     - cidoc.cidoc_entity_bundle.e21_person
     - core.entity_view_mode.cidoc_entity.timeline_preselection
     - field.field.cidoc_entity.e21_person.field_generation
-    - field.field.cidoc_entity.e21_person.field_notes
     - image.style.comparative_timeline_logo
   module:
     - image
@@ -16,32 +15,12 @@ targetEntityType: cidoc_entity
 bundle: e21_person
 mode: timeline_preselection
 content:
-  activity_of_author_entity_view_1:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  activity_of_author_entity_view_2:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   carried_out_by__entity_view_1:
     weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
   childrens_with_entity_view_1:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  childrens_with_entity_view_2:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  childrens_with_entity_view_3:
     weight: 10
     settings: {  }
     third_party_settings: {  }
@@ -249,22 +228,12 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  is_referred_to_by_entity_view_1:
+  duplicate_of_map_of_places_people_went_refers_to__entity_view_1:
     weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
   is_referred_to_by_entity_view_2:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  map_of_places_people_went_references__entity_view_1:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  married_to_entity_view_1:
     weight: 10
     settings: {  }
     third_party_settings: {  }
@@ -278,11 +247,6 @@ content:
     third_party_settings: {  }
     region: content
   participated_in_entity_view_1:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  rejected_or_debated_attributions__entity_view_1:
     weight: 10
     settings: {  }
     third_party_settings: {  }
@@ -331,8 +295,8 @@ hidden:
   cidoc_properties_transcript: true
   citation: true
   field_generation: true
-  field_notes: true
   internal_name: true
+  langcode: true
   map_link: true
   map_of_places_people_went_entity_view_1: true
   p108_produced_object_entity_view_1: true

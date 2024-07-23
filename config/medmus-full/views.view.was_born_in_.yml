@@ -271,7 +271,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<strong>Birth:</strong> {{name_1}} '
+            text: '<strong>Birth:</strong> {{name_1}}'
             make_link: false
             path: ''
             absolute: false

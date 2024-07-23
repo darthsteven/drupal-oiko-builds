@@ -5,12 +5,10 @@ dependencies:
   config:
     - cidoc.cidoc_entity_bundle.ec1_work
     - field.storage.cidoc_entity.field_date
-    - field.storage.cidoc_entity.field_generation
   module:
     - cidoc
     - csv_serialization
     - edtf
-    - options
     - rest
     - serialization
     - text
@@ -8710,45 +8708,18 @@ display:
           plugin_id: cidoc_related_entity_forward
       filters:
         status:
-          id: status
+          value: '1'
           table: cidoc_entity
           field: status
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '='
-          value: '0'
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
           plugin_id: boolean
           entity_type: cidoc_entity
           entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
         bundle:
           id: bundle
           table: cidoc_entity
@@ -19338,7 +19309,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: edtf_edtf_formatter
+          type: edtf_human_readable_formatter
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -19546,68 +19517,6 @@ display:
           entity_type: cidoc_entity
           entity_field: name
           plugin_id: field
-        field_generation:
-          id: field_generation
-          table: cidoc_entity__field_generation
-          field: field_generation
-          relationship: related_entities
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
         field_date_1:
           id: field_date_1
           table: cidoc_entity__field_date
@@ -19657,7 +19566,7 @@ display:
           empty_zero: false
           hide_alter_empty: true
           click_sort_column: value
-          type: edtf_edtf_formatter
+          type: edtf_human_readable_formatter
           settings: {  }
           group_column: value
           group_columns: {  }
@@ -19864,68 +19773,6 @@ display:
           field_api_classes: false
           entity_type: cidoc_entity
           entity_field: name
-          plugin_id: field
-        field_generation_1:
-          id: field_generation_1
-          table: cidoc_entity__field_generation
-          field: field_generation
-          relationship: related_entities_2
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
           plugin_id: field
         field_date_2:
           id: field_date_2
@@ -20184,68 +20031,6 @@ display:
           entity_type: cidoc_entity
           entity_field: name
           plugin_id: field
-        field_generation_2:
-          id: field_generation_2
-          table: cidoc_entity__field_generation
-          field: field_generation
-          relationship: related_entities_3
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: list_default
-          settings: {  }
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          plugin_id: field
       defaults:
         fields: false
         style: false
@@ -20264,7 +20049,7 @@ display:
         options:
           field_options:
             field_date:
-              alias: model_date
+              alias: model_name
               raw_output: false
             name:
               alias: model_incipit
@@ -20275,8 +20060,8 @@ display:
             name_3:
               alias: model_author
               raw_output: false
-            name_5:
-              alias: metrical_affinities_author
+            field_date_3:
+              alias: model_author_activity_date
               raw_output: false
             field_date_1:
               alias: contrafactum_date
@@ -20290,6 +20075,9 @@ display:
             name_4:
               alias: contrafactum_author
               raw_output: false
+            field_date_4:
+              alias: contrafactum_author_activity_date
+              raw_output: false
             field_date_2:
               alias: metrical_affinities_date
               raw_output: false
@@ -20299,8 +20087,11 @@ display:
             internal_name_2:
               alias: metrical_affinities_id
               raw_output: false
-            field_generation:
-              alias: model_author_generation
+            name_5:
+              alias: metrical_affinities_author
+              raw_output: false
+            field_date_5:
+              alias: metrical_affinities_author_activity_date
               raw_output: false
       pager:
         type: none
@@ -21698,88 +21489,6 @@ display:
           entity_type: cidoc_entity
           entity_field: name
           plugin_id: string
-        name_2:
-          id: name_2
-          table: cidoc_entity
-          field: name
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: '!='
-          value: 'Canso d''Antiocha'
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: cidoc_entity
-          entity_field: name
-          plugin_id: string
-        name_3:
-          id: name_3
-          table: cidoc_entity
-          field: name
-          relationship: related_entities_1
-          group_type: group
-          admin_label: ''
-          operator: '!='
-          value: 'Canso d''Antiocha'
-          group: 2
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            placeholder: ''
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          entity_type: cidoc_entity
-          entity_field: name
-          plugin_id: string
       filter_groups:
         operator: OR
         groups:
@@ -21793,4 +21502,3 @@ display:
         - request_format
       tags:
         - 'config:field.storage.cidoc_entity.field_date'
-        - 'config:field.storage.cidoc_entity.field_generation'

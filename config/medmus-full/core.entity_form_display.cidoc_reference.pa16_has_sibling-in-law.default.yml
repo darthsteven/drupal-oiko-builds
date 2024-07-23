@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pa16_has_sibling-in-law.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pa16_has_sibling-in-law.default
 targetEntityType: cidoc_reference
 bundle: pa16_has_sibling-in-law

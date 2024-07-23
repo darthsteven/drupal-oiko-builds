@@ -153,6 +153,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:domain:p2_has_type':
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   'cidoc_properties:domain:p4_has_time_span':
     weight: 4
     region: content
@@ -311,6 +316,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 1
@@ -366,7 +378,6 @@ content:
 hidden:
   'cidoc_properties:domain:p102_has_title': true
   'cidoc_properties:domain:p1_is_identified_by': true
-  'cidoc_properties:domain:p2_has_type': true
   'cidoc_properties:domain:p48_has_preferred_identifier': true
   'cidoc_properties:range:p12_occurred_in_the_presence_of': true
   'cidoc_properties:range:p132_overlaps_with': true

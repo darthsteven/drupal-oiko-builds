@@ -63,6 +63,11 @@ content:
     weight: 13
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:range:pa19_has_language':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   cidoc_temporal_summary:
     region: content
     type: string
@@ -98,6 +103,7 @@ hidden:
   cidoc_properties_transcript: true
   citation: true
   internal_name: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_link: true

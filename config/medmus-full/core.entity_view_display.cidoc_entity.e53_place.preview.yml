@@ -157,6 +157,7 @@ hidden:
   field_level_2: true
   field_location_lookup: true
   field_pleiades_uri: true
+  langcode: true
   map_link: true
   p10_falls_within_entity_view_1: true
   p10_includes_entity_view_1: true

@@ -1,6 +1,6 @@
 uuid: 544edc28-ec3a-4a2b-a3cf-d403eff4d53d
 langcode: en
-status: true
+status: false
 dependencies:
   config:
     - field.storage.cidoc_reference.domain

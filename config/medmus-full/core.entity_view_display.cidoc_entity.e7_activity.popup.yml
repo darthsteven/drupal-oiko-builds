@@ -16,7 +16,7 @@ third_party_settings:
         - 'cidoc_properties:domain:p12_occurred_in_the_presence_of'
         - 'cidoc_properties:domain:p11_had_participant'
       parent_name: ''
-      weight: 7
+      weight: 9
       label: '<span class="fa fa-users">&nbsp;&nbsp;</span>Participants'
       format_type: html_element
       format_settings:
@@ -85,7 +85,7 @@ third_party_settings:
     group_objects:
       children: {  }
       parent_name: ''
-      weight: 9
+      weight: 8
       label: '<span class="fa fa-cubes">&nbsp;&nbsp;</span>Objects used'
       format_type: html_element
       format_settings:
@@ -120,7 +120,7 @@ third_party_settings:
       children:
         - 'cidoc_properties:domain:p7_took_place_at'
       parent_name: ''
-      weight: 8
+      weight: 7
       format_type: html_element
       format_settings:
         id: ''
@@ -336,6 +336,7 @@ hidden:
   duplicate_of_p15_influenced_entity_view_1: true
   duplicate_of_p15_was_influenced_by_entity_view_1: true
   internal_name: true
+  langcode: true
   map_link: true
   p10_falls_within_entity_view_1: true
   p10_includes_entity_view_1: true

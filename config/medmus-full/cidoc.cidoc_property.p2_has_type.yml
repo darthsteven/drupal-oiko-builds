@@ -46,6 +46,8 @@ domain_bundles:
   - ec11_melodic_scheme
 range_bundles:
   - e55_type
+  - e56_language
+  - e57_material
 editability:
   domain: true
   range: true
@@ -61,5 +63,5 @@ autocomplete_description:
   domain: ''
   range: ''
 child_events:
-  domain: 0
+  domain: domain
   range: 0

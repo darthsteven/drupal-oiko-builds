@@ -145,6 +145,7 @@ hidden:
   cidoc_properties_transcript: true
   cidoc_temporal_summary: true
   duplicate_of_p7_took_place_at_entity_view_3: true
+  langcode: true
   map_link: true
   p7_took_place_at_map_entity_view_2: true
   p7_took_place_at_map_entity_view_3: true

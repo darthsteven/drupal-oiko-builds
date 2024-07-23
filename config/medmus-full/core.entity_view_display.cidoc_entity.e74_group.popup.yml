@@ -15,7 +15,7 @@ third_party_settings:
         - 'cidoc_properties:domain:p131_is_identified_by'
         - 'cidoc_properties:domain:p1_is_identified_by'
       parent_name: ''
-      weight: 5
+      weight: 6
       format_type: html_element
       format_settings:
         id: ''
@@ -30,11 +30,9 @@ third_party_settings:
       label: '<span class="fa fa-id-card-o">&nbsp;&nbsp;</span>Also known as'
       region: content
     group_influences:
-      children:
-        - 'cidoc_properties:range:p17_was_motivated_by'
-        - 'cidoc_properties:range:p15_was_influenced_by'
+      children: {  }
       parent_name: ''
-      weight: 6
+      weight: 7
       format_type: html_element
       format_settings:
         id: ''
@@ -49,14 +47,11 @@ third_party_settings:
       label: '<span class="fa fa-exchange">&nbsp;&nbsp;</span>Influences'
       region: content
     group_family:
-      children:
-        - 'cidoc_properties:domain:p107_has_current_or_former_membe'
-        - 'cidoc_properties:range:p107_has_current_or_former_membe'
+      children: {  }
       parent_name: ''
-      weight: 7
+      weight: 8
       format_type: html_element
       format_settings:
-        label: '<span class="fa fa-users">&nbsp;&nbsp;</span>Members'
         element: div
         show_label: true
         label_element: h3
@@ -73,10 +68,9 @@ third_party_settings:
         - 'cidoc_properties:range:p95_has_formed'
         - 'cidoc_properties:range:p99_dissolved'
       parent_name: ''
-      weight: 9
+      weight: 12
       format_type: html_element
       format_settings:
-        label: '<span class="fa fa-id-card-o">&nbsp;&nbsp;</span>Lifecycle'
         element: div
         show_label: true
         label_element: h3
@@ -90,15 +84,13 @@ third_party_settings:
       region: content
     group_events:
       children:
-        - map_of_places_people_went_entity_view_1
         - 'cidoc_properties:range:p14_carried_out_by'
         - 'cidoc_properties:range:p11_had_participant'
         - 'cidoc_properties:range:p12_occurred_in_the_presence_of'
       parent_name: ''
-      weight: 8
+      weight: 9
       format_type: html_element
       format_settings:
-        label: '<span class="fa fa-calendar">&nbsp;&nbsp;</span>Events and Activities'
         element: div
         show_label: true
         label_element: h3
@@ -116,10 +108,10 @@ bundle: e74_group
 mode: popup
 content:
   cidoc_admin_links:
-    weight: 3
+    weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   'cidoc_properties:domain:p107_has_current_or_former_membe':
     weight: 13
     settings: {  }
@@ -127,14 +119,24 @@ content:
     region: content
   'cidoc_properties:domain:p131_is_identified_by':
     weight: 1
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   'cidoc_properties:domain:p1_is_identified_by':
     weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:domain:p2_has_type':
+    weight: 1
     region: content
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:domain:p48_has_preferred_identifier':
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   'cidoc_properties:range:p100_was_death_of':
     weight: 9
     settings: {  }
@@ -147,44 +149,39 @@ content:
     region: content
   'cidoc_properties:range:p11_had_participant':
     weight: 8
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   'cidoc_properties:range:p12_occurred_in_the_presence_of':
-    weight: 9
+    weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   'cidoc_properties:range:p13_destroyed':
     weight: 15
     settings: {  }
     third_party_settings: {  }
     region: content
   'cidoc_properties:range:p143_joined':
-    weight: 21
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  'cidoc_properties:range:p144_joined_with':
-    weight: 21
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:range:p145_separated':
-    weight: 21
+    weight: 18
     region: content
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:range:p146_separated_from':
-    weight: 21
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:range:p14_carried_out_by':
     weight: 7
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   'cidoc_properties:range:p15_was_influenced_by':
     weight: 15
     settings: {  }
@@ -205,11 +202,16 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  'cidoc_properties:range:p95_has_formed':
-    weight: 21
+  'cidoc_properties:range:p67_refers_to':
+    weight: 16
+    region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:range:p95_has_formed':
+    weight: 21
     region: content
+    settings: {  }
+    third_party_settings: {  }
   'cidoc_properties:range:p96_by_mother':
     weight: 8
     settings: {  }
@@ -227,21 +229,36 @@ content:
     region: content
   'cidoc_properties:range:p99_dissolved':
     weight: 22
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   cidoc_temporal_summary:
-    weight: 1
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   content:
     type: text_default
-    weight: 4
+    weight: 5
     label: above
     settings: {  }
     third_party_settings: {  }
     region: content
+  duplicate_of_map_of_places_people_went_refers_to__entity_view_1:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  group__entity_view_1:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  map_of_places_people_went_copy__entity_view_1:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   map_of_places_people_went_entity_view_1:
     weight: 6
     settings: {  }
@@ -267,7 +284,7 @@ content:
     region: content
   significance:
     type: entity_reference_entity_view
-    weight: 2
+    weight: 3
     label: visually_hidden
     settings:
       view_mode: primary_historical_significance_pill
@@ -277,7 +294,7 @@ content:
 hidden:
   appelations_entity_view_1: true
   cidoc_properties: true
-  'cidoc_properties:domain:p2_has_type': true
+  'cidoc_properties:range:p144_joined_with': true
   cidoc_properties_transcript: true
   citation: true
   duplicate_of_p134_continues_entity_view_1: true

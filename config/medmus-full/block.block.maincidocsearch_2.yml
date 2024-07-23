@@ -1,6 +1,6 @@
 uuid: 63a56e3b-b18e-42fe-8946-158042c5aa48
 langcode: en
-status: false
+status: true
 dependencies:
   module:
     - oiko_app
@@ -8,7 +8,7 @@ dependencies:
     - medmus
 id: maincidocsearch_2
 theme: medmus
-region: primary_menu
+region: secondary_menu
 weight: -17
 provider: null
 plugin: main_cidoc_search
@@ -18,7 +18,7 @@ settings:
   provider: oiko_app
   label_display: '0'
   placeholder_map: Search
-  no_search_map: 'Search for events, people, groups, places, manuscripts...'
+  no_search_map: 'Search for events, people, groups, places, types, manuscripts...'
   placeholder_timeline: 'Search groups and people'
   no_search_timeline: 'Search for communities, empires or groups to compare on your timeline e.g. ''The Roman Empire'' or ''the Han''.'
   no_results_text: 'No results found.'

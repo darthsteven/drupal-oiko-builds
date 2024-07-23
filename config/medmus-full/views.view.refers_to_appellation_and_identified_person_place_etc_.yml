@@ -349,8 +349,8 @@ display:
           label: ''
           exclude: false
           alter:
-            alter_text: true
-            text: '{{name}} &nbsp;'
+            alter_text: false
+            text: "\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -415,7 +415,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '&nbsp;&nbsp;(&#9659; {{name_1}})'
+            text: '(&#9659; {{name_1}})'
             make_link: false
             path: ''
             absolute: false
@@ -1266,7 +1266,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: ' (&#9659; {{name_1}})'
+            text: '(&#9659; {{name_1}})'
             make_link: false
             path: ''
             absolute: false

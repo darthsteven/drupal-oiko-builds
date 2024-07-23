@@ -274,7 +274,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<strong>Death:</strong> {{name}} '
+            text: '<strong>Death:</strong> {{name}}'
             make_link: false
             path: ''
             absolute: false

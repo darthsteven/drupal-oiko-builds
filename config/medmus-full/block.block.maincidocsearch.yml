@@ -9,7 +9,7 @@ dependencies:
 id: maincidocsearch
 theme: oiko
 region: search_header
-weight: -13
+weight: 0
 provider: null
 plugin: main_cidoc_search
 settings:

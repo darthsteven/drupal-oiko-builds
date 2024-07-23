@@ -321,6 +321,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  maps_of_things_happened_in_activity_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   name:
     type: string
     weight: 0
@@ -370,6 +375,7 @@ hidden:
   e67_birth_child_entity_view_1: true
   e67_birth_parents_entity_view_1: true
   internal_name: true
+  langcode: true
   map_link: true
   p10_falls_within_entity_view_1: true
   p10_includes_entity_view_1: true

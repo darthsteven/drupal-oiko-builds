@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pa11_has_ancestor.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pa11_has_ancestor.default
 targetEntityType: cidoc_reference
 bundle: pa11_has_ancestor

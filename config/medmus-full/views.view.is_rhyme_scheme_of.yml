@@ -142,7 +142,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: ' ({{name_1}})'
+            text: '({{name_1}})'
             make_link: false
             path: ''
             absolute: false

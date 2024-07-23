@@ -11,7 +11,7 @@ dependencies:
 id: network
 theme: medmus
 region: user_header
-weight: -14
+weight: -12
 provider: null
 plugin: 'block_content:647ad45a-b2f4-47cb-a38f-1624644e9005'
 settings:

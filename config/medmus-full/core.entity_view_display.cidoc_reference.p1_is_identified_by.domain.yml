@@ -27,6 +27,7 @@ hidden:
   citation: true
   domain: true
   field_language: true
+  langcode: true
   property: true
   search_api_excerpt: true
   user_id: true

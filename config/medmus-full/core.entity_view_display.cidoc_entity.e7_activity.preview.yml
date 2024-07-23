@@ -76,6 +76,11 @@ content:
       link_to_entity: false
     weight: 2
     third_party_settings: {  }
+  maps_of_things_happened_in_activity_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   name:
     region: content
     type: string
@@ -84,6 +89,11 @@ content:
       link_to_entity: true
     weight: 1
     third_party_settings: {  }
+  p7_took_place_at_map_entity_view_3:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   significance:
     region: content
     type: entity_reference_label
@@ -127,6 +137,7 @@ hidden:
   cidoc_temporal_summary: true
   duplicate_of_p15_influenced_entity_view_1: true
   duplicate_of_p15_was_influenced_by_entity_view_1: true
+  langcode: true
   map_link: true
   p10_falls_within_entity_view_1: true
   p10_includes_entity_view_1: true

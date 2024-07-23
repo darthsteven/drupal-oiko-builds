@@ -13,64 +13,71 @@ bundle: ec7_source
 mode: popup
 content:
   cidoc_admin_links:
-    weight: 3
     region: content
+    type: text_default
     settings: {  }
+    weight: 3
     third_party_settings: {  }
   'cidoc_properties:domain:p102_has_title':
-    weight: 5
     region: content
+    weight: 5
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:domain:p128_carries':
+    region: content
+    weight: 6
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:p1_is_identified_by':
-    weight: 6
     region: content
+    weight: 7
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:p2_has_type':
-    weight: 8
     region: content
+    weight: 8
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:p45_consists_of':
-    weight: 9
     region: content
+    weight: 9
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:p48_has_preferred_identifier':
-    weight: 7
     region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:pa19_has_language':
     weight: 20
-    region: content
     settings: {  }
     third_party_settings: {  }
-  'cidoc_properties:range:p108_has_produced':
-    weight: 16
     region: content
+  'cidoc_properties:range:p108_has_produced':
+    region: content
+    weight: 11
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:range:p12_occurred_in_the_presence_of':
-    weight: 17
     region: content
+    weight: 12
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:range:p13_destroyed':
-    weight: 18
     region: content
+    weight: 13
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:range:p67_refers_to':
-    weight: 19
     region: content
+    weight: 14
     settings: {  }
     third_party_settings: {  }
   cidoc_temporal_summary:
-    weight: 1
     region: content
+    type: string
     settings: {  }
+    weight: 1
     third_party_settings: {  }
   content:
     region: content
@@ -80,15 +87,15 @@ content:
     settings: {  }
     third_party_settings: {  }
   ms_language_entity_view_1:
-    weight: 14
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   mss_associated_with_shelfmark_entity_view_1:
     weight: 10
-    region: content
     settings: {  }
     third_party_settings: {  }
+    region: content
   name:
     region: content
     type: string
@@ -98,20 +105,20 @@ content:
     weight: 0
     third_party_settings: {  }
   production_info_entity_view_1:
-    weight: 13
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   production_info_entity_view_2:
-    weight: 12
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   production_info_entity_view_3:
-    weight: 11
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
   significance:
     region: content
     type: entity_reference_entity_view
@@ -122,16 +129,16 @@ content:
     weight: 2
     third_party_settings: {  }
   works_contained_in_ms_entity_view_1:
-    weight: 15
-    region: content
+    weight: 10
     settings: {  }
     third_party_settings: {  }
+    region: content
 hidden:
   cidoc_properties: true
-  'cidoc_properties:domain:p128_carries': true
   cidoc_properties_transcript: true
   citation: true
   internal_name: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_link: true

@@ -6,6 +6,8 @@ dependencies:
     - cidoc.cidoc_entity_bundle.e52_time_span
     - field.storage.cidoc_entity.field_date
     - user.role.administrator
+    - user.role.anonymous
+    - user.role.authenticated
     - user.role.content_editor
   module:
     - cidoc
@@ -29,6 +31,8 @@ display:
         type: role
         options:
           role:
+            anonymous: anonymous
+            authenticated: authenticated
             administrator: administrator
             content_editor: content_editor
       cache:
@@ -55,7 +59,7 @@ display:
       pager:
         type: mini
         options:
-          items_per_page: 100
+          items_per_page: 50
           offset: 0
           id: 0
           total_pages: null
@@ -63,12 +67,12 @@ display:
             previous: ‹‹
             next: ››
           expose:
-            items_per_page: false
+            items_per_page: true
             items_per_page_label: 'Items per page'
-            items_per_page_options: '5, 10, 25, 50'
-            items_per_page_options_all: false
+            items_per_page_options: '50, 100, 200, 300, 400, 500, 1000'
+            items_per_page_options_all: true
             items_per_page_options_all_label: '- All -'
-            offset: false
+            offset: true
             offset_label: Offset
       style:
         type: table
@@ -133,122 +137,6 @@ display:
           separator: ''
           hide_empty: false
       fields:
-        counter:
-          id: counter
-          table: views
-          field: counter
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: 'View result counter'
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          counter_start: 1
-          plugin_id: counter
-        id:
-          id: id
-          table: cidoc_entity
-          field: id
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ID
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: true
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          click_sort_column: value
-          type: number_integer
-          settings:
-            thousand_separator: ''
-            prefix_suffix: true
-          group_column: value
-          group_columns: {  }
-          group_rows: true
-          delta_limit: 0
-          delta_offset: 0
-          delta_reversed: false
-          delta_first_last: false
-          multi_type: separator
-          separator: ', '
-          field_api_classes: false
-          entity_type: cidoc_entity
-          entity_field: id
-          plugin_id: field
         name:
           id: name
           table: cidoc_entity
@@ -257,7 +145,7 @@ display:
           group_type: group
           admin_label: ''
           label: 'Time span Name:'
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -321,7 +209,7 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          label: 'Field "Date"'
+          label: Date
           exclude: false
           alter:
             alter_text: false
@@ -493,15 +381,15 @@ display:
           entity_type: cidoc_entity
           entity_field: name
           plugin_id: field
-        operations_1:
-          id: operations_1
+        user_id:
+          id: user_id
           table: cidoc_entity
-          field: operations
-          relationship: related_entities_reverse
+          field: user_id
+          relationship: none
           group_type: group
           admin_label: ''
-          label: 'Operations links'
-          exclude: false
+          label: 'Authored by'
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -541,9 +429,23 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          destination: false
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
           entity_type: cidoc_entity
-          plugin_id: entity_operations
+          entity_field: user_id
+          plugin_id: field
       filters:
         status:
           id: status
@@ -553,9 +455,9 @@ display:
           group_type: group
           admin_label: ''
           operator: '='
-          value: All
+          value: '1'
           group: 1
-          exposed: true
+          exposed: false
           expose:
             operator_id: ''
             label: Published
@@ -682,10 +584,10 @@ display:
           entity_field: name
           plugin_id: string
       sorts:
-        field_date_value:
-          id: field_date_value
+        field_date_maxmax:
+          id: field_date_maxmax
           table: cidoc_entity__field_date
-          field: field_date_value
+          field: field_date_maxmax
           relationship: none
           group_type: group
           admin_label: ''
@@ -813,7 +715,7 @@ display:
           plugin_id: cidoc_related_entity_reverse
       arguments: {  }
       display_extenders: {  }
-      title: 'TIME-SPAN CHECK'
+      title: DATES
     cache_metadata:
       max-age: -1
       contexts:

@@ -221,6 +221,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:range:p67_refers_to':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   'cidoc_properties:range:p95_has_formed':
     weight: 21
     region: content
@@ -231,6 +236,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  duplicate_of_map_of_places_people_went_refers_to__entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   e6_destroyed_entity_view_1:
     weight: 10
     region: content
@@ -284,6 +294,7 @@ hidden:
   duplicate_of_p15_was_influenced_by_entity_view_1: true
   internal_name: true
   key_achievements_entity_view_1: true
+  langcode: true
   map_link: true
   map_of_places_people_went_entity_view_1: true
   p11_participae_entity_view_1: true

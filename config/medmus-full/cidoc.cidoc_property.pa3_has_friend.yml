@@ -3,10 +3,10 @@ langcode: en
 status: true
 dependencies: {  }
 id: pa3_has_friend
-label: 'PA3 has friend'
+label: 'has friend'
 bidirectional: true
 reverse_label: 'PA3 has friend'
-friendly_label: 'Has friend'
+friendly_label: ''
 reverse_friendly_label: ''
 domain_bundles:
   - e21_person
@@ -14,7 +14,7 @@ range_bundles:
   - e21_person
 editability:
   domain: true
-  range: false
+  range: true
 timesubwidget:
   domain:
     type: 'no'

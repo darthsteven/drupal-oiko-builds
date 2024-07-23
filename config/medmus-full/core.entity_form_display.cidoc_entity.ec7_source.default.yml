@@ -17,7 +17,7 @@ third_party_settings:
       children:
         - content
       parent_name: group_main_deets
-      weight: 12
+      weight: 11
       label: 'Descriptive text'
       format_type: fieldset
       format_settings:
@@ -54,7 +54,6 @@ third_party_settings:
         - 'cidoc_properties:range:p108_has_produced'
         - 'cidoc_properties:range:p13_destroyed'
         - 'cidoc_properties:range:p12_occurred_in_the_presence_of'
-        - 'cidoc_properties:domain:pa19_has_language'
         - group_descriptive_text
       parent_name: group_data
       weight: 3
@@ -197,11 +196,6 @@ content:
     third_party_settings: {  }
   'cidoc_properties:domain:p9_consists_of':
     weight: 6
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  'cidoc_properties:domain:pa19_has_language':
-    weight: 11
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -348,6 +342,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 1
@@ -358,7 +359,7 @@ content:
     region: content
   path:
     type: path
-    weight: 18
+    weight: 17
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -402,6 +403,7 @@ content:
     third_party_settings: {  }
 hidden:
   'cidoc_properties:domain:p1_is_identified_by': true
+  'cidoc_properties:domain:pa19_has_language': true
   'cidoc_properties:range:p132_overlaps_with': true
   'cidoc_properties:range:p133_is_separated_from': true
   'cidoc_properties:range:p67_refers_to': true

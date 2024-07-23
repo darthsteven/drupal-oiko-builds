@@ -52,6 +52,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:domain:pa19_has_language':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   citation:
     region: content
     type: entity_reference_revisions_entity_view
@@ -76,6 +81,16 @@ content:
       link_to_entity: false
     weight: 2
     third_party_settings: {  }
+  ms_language_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  mss_associated_with_shelfmark_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   name:
     region: content
     type: string
@@ -84,6 +99,21 @@ content:
       link_to_entity: true
     weight: 1
     third_party_settings: {  }
+  production_info_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  production_info_entity_view_2:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  production_info_entity_view_3:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   significance:
     region: content
     type: entity_reference_label
@@ -100,6 +130,11 @@ content:
     settings:
       link: true
     third_party_settings: {  }
+  works_contained_in_ms_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   'cidoc_properties:domain:p102_has_title': true
   'cidoc_properties:domain:p128_carries': true
@@ -125,6 +160,7 @@ hidden:
   'cidoc_properties:range:pc5_has_expression': true
   cidoc_properties_transcript: true
   cidoc_temporal_summary: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_link: true

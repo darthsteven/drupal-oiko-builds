@@ -14,6 +14,11 @@ targetEntityType: cidoc_entity
 bundle: e74_group
 mode: timeline_preselection
 content:
+  'cidoc_properties:domain:p48_has_preferred_identifier':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   'cidoc_properties:range:p143_joined':
     weight: 21
     region: content
@@ -34,6 +39,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:range:p67_refers_to':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   cidoc_temporal_summary:
     weight: 1
     settings: {  }
@@ -45,6 +55,11 @@ content:
     label: hidden
     settings:
       trim_length: 120
+    third_party_settings: {  }
+    region: content
+  duplicate_of_map_of_places_people_went_refers_to__entity_view_1:
+    weight: 10
+    settings: {  }
     third_party_settings: {  }
     region: content
   name:
@@ -82,6 +97,7 @@ hidden:
   cidoc_properties_transcript: true
   citation: true
   internal_name: true
+  langcode: true
   map_link: true
   map_of_places_people_went_entity_view_1: true
   p108_produced_object_entity_view_1: true

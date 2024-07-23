@@ -10,8 +10,8 @@ dependencies:
     - medmus
 id: medmus_tools
 theme: medmus
-region: header
-weight: -18
+region: primary_menu
+weight: -12
 provider: null
 plugin: 'system_menu_block:tools'
 settings:

@@ -16,3 +16,5 @@ hidden:
   description: true
   field_icon_color: true
   field_single_color: true
+  langcode: true
+  search_api_excerpt: true

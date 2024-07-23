@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pc14_has_indirect_source.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pc14_has_indirect_source.default
 targetEntityType: cidoc_reference
 bundle: pc14_has_indirect_source

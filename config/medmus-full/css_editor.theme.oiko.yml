@@ -1,0 +1,5 @@
+enabled: 0
+plaintext_enabled: 0
+autopreview_enabled: 0
+css: ''
+path: 'public://css_editor/oiko.css'

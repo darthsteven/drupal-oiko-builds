@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pa8_has_cousin.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pa8_has_cousin.default
 targetEntityType: cidoc_reference
 bundle: pa8_has_cousin

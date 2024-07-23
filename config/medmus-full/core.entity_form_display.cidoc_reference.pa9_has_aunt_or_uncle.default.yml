@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pa9_has_aunt_or_uncle.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pa9_has_aunt_or_uncle.default
 targetEntityType: cidoc_reference
 bundle: pa9_has_aunt_or_uncle

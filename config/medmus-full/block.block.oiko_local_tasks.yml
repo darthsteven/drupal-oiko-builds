@@ -7,7 +7,7 @@ dependencies:
 id: oiko_local_tasks
 theme: oiko
 region: content
-weight: -10
+weight: -4
 provider: null
 plugin: local_tasks_block
 settings:

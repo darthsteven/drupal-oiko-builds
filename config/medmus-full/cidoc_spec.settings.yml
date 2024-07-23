@@ -68,6 +68,7 @@ enabled_properties:
   - p144_joined_with
   - p145_separated
   - p146_separated_from
+  - p148_has_component
   - pa1_has_patron
   - pa2_has_acquaintance
   - pa3_has_friend

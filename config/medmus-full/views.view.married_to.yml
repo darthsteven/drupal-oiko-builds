@@ -1,4 +1,4 @@
-uuid: 4bd1d013-f3a8-4f6f-adb1-df8c6bf47bf0
+uuid: 34f1bdbb-8ea3-4247-9f2e-f640cb38a98e
 langcode: en
 status: true
 dependencies:
@@ -6,7 +6,7 @@ dependencies:
     - cidoc
     - eva
 id: married_to
-label: 'married to'
+label: 'Married to'
 module: views
 description: ''
 tag: ''
@@ -76,8 +76,8 @@ display:
           hide_empty: false
           default_field_elements: true
       fields:
-        name_2:
-          id: name_2
+        name:
+          id: name
           table: cidoc_entity
           field: name
           relationship: none
@@ -141,8 +141,8 @@ display:
           entity_type: cidoc_entity
           entity_field: name
           plugin_id: field
-        name:
-          id: name
+        name_1:
+          id: name_1
           table: cidoc_entity
           field: name
           relationship: related_entities_1
@@ -206,8 +206,8 @@ display:
           entity_type: cidoc_entity
           entity_field: name
           plugin_id: field
-        name_1:
-          id: name_1
+        name_2:
+          id: name_2
           table: cidoc_entity
           field: name
           relationship: related_entities
@@ -217,7 +217,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if name_1 != name_2 %}<strong>Spouse: </strong>{{name_1}}{% endif %}\r\n\r\n{% if name_3 %} ({{ name_3 }}){% endif %}"
+            text: '{% if name_2 != name %}<strong>Spouse: </strong>{{name_2}}{% endif %}'
             make_link: false
             path: ''
             absolute: false
@@ -244,16 +244,16 @@ display:
             html: false
           element_type: ''
           element_class: ''
-          element_label_type: strong
+          element_label_type: ''
           element_label_class: ''
           element_label_colon: false
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
           empty: ''
-          hide_empty: true
+          hide_empty: false
           empty_zero: false
-          hide_alter_empty: false
+          hide_alter_empty: true
           click_sort_column: value
           type: string
           settings:
@@ -285,7 +285,19 @@ display:
             operator_limit_selection: false
             operator_list: {  }
           group: 1
-      sorts: {  }
+      sorts:
+        field_date_value:
+          id: field_date_value
+          table: cidoc_entity__field_date
+          field: field_date_value
+          relationship: none
+          group_type: group
+          admin_label: ''
+          order: ASC
+          exposed: false
+          expose:
+            label: ''
+          plugin_id: standard
       header: {  }
       footer: {  }
       empty: {  }
@@ -296,7 +308,7 @@ display:
           field: related_entities_reverse
           relationship: none
           group_type: group
-          admin_label: marriage
+          admin_label: Marriage
           required: true
           limit_bundles:
             pc11_has_spouse: pc11_has_spouse
@@ -448,7 +460,6 @@ display:
             p146_separated_from: 0
             pa1_has_patron: 0
             pa2_has_acquaintance: 0
-            pa3_has_friend: 0
             pa4_has_muse: 0
             pa5_has_lover: 0
             pa6_has_murder_victim: 0
@@ -478,6 +489,7 @@ display:
             pc12_has_intertextual_relationsh: 0
             pc13_has_response: 0
             pc14_has_indirect_source: 0
+            pa3_has_friend: 0
           limit_types:
             e5_event: 0
             e6_destruction: 0
@@ -559,7 +571,6 @@ display:
             p146_separated_from: 0
             pa1_has_patron: 0
             pa2_has_acquaintance: 0
-            pa3_has_friend: 0
             pa4_has_muse: 0
             pa5_has_lover: 0
             pa6_has_murder_victim: 0
@@ -590,6 +601,7 @@ display:
             pc12_has_intertextual_relationsh: 0
             pc13_has_response: 0
             pc14_has_indirect_source: 0
+            pa3_has_friend: 0
           limit_types:
             e5_event: 0
             e6_destruction: 0
@@ -679,9 +691,9 @@ display:
     position: 1
     display_options:
       display_extenders: {  }
+      entity_type: cidoc_entity
       bundles:
         - e21_person
-      entity_type: cidoc_entity
     cache_metadata:
       max-age: -1
       contexts:

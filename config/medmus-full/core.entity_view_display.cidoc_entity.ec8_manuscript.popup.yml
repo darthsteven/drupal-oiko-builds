@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.cidoc_entity.popup
     - field.field.cidoc_entity.ec8_manuscript.field_exclude_from_duplicates_
   module:
-    - entity_reference_revisions
     - field_group
     - text
 third_party_settings:
@@ -39,7 +38,7 @@ third_party_settings:
       children:
         - 'cidoc_properties:domain:p128_carries'
       parent_name: ''
-      weight: 27
+      weight: 15
       format_type: html_element
       region: hidden
       format_settings:
@@ -114,15 +113,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  citation:
-    type: entity_reference_revisions_entity_view
-    weight: 14
-    region: content
-    label: above
-    settings:
-      view_mode: default
-      link: ''
-    third_party_settings: {  }
   content:
     region: content
     label: hidden
@@ -173,7 +163,7 @@ content:
     weight: 2
     third_party_settings: {  }
   works_contained_in_ms_entity_view_1:
-    weight: 13
+    weight: 14
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -183,8 +173,10 @@ hidden:
   'cidoc_properties:domain:pa19_has_language': true
   'cidoc_properties:range:p108_has_produced': true
   cidoc_properties_transcript: true
+  citation: true
   field_exclude_from_duplicates_: true
   internal_name: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_link: true

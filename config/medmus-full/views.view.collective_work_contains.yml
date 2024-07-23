@@ -170,7 +170,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: '<br/><h3>Cited articles from collective work:</h3>'
+            value: '<br/><h3>This collective work contains:</h3>'
             format: basic_html
           plugin_id: text
       footer: {  }

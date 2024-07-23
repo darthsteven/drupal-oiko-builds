@@ -9,7 +9,7 @@ dependencies:
 id: oiko_help
 theme: oiko
 region: content
-weight: -13
+weight: -7
 provider: null
 plugin: help_block
 settings:

@@ -7,7 +7,7 @@ label: 'P143 joined'
 bidirectional: false
 reverse_label: 'P143 was joined by'
 friendly_label: joined
-reverse_friendly_label: 'was joined by'
+reverse_friendly_label: Joins
 domain_bundles:
   - e85_joining
 range_bundles:
@@ -18,7 +18,8 @@ editability:
   range: true
 timesubwidget:
   domain:
-    type: 'no'
+    type: time
+    title_template: '@target_name is joined by @source_name'
   range:
     type: generic
     sub_property: p144_joined_with

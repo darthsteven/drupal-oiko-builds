@@ -4,10 +4,8 @@ status: true
 dependencies:
   config:
     - field.field.node.content_page.body
-    - field.field.node.content_page.field_file
     - node.type.content_page
   module:
-    - file
     - path
     - text
 id: node.content_page.default
@@ -31,13 +29,13 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-  field_file:
-    weight: 122
-    settings:
-      progress_indicator: throbber
-    third_party_settings: {  }
-    type: file_generic
+  langcode:
+    type: language_select
+    weight: 2
     region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   path:
     type: path
     weight: 30

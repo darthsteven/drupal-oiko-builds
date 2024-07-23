@@ -1,12 +1,7 @@
 uuid: 513ab92a-82ed-45b8-904c-e1abe3406168
 langcode: en
 status: true
-dependencies:
-  module:
-    - oiko_leaflet
-third_party_settings:
-  oiko_leaflet:
-    item_color: blue
+dependencies: {  }
 _core:
   default_config_hash: KTl5rL8t6eVkL-S7173frU5ysqUSiMr9KQqSUCSKXcc
 crm_entity: e5_event

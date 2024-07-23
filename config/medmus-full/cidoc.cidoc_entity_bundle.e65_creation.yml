@@ -1,12 +1,7 @@
 uuid: f57a27a3-73b3-4dc2-af1f-b1a26a45e93b
 langcode: en
 status: true
-dependencies:
-  module:
-    - oiko_leaflet
-third_party_settings:
-  oiko_leaflet:
-    item_color: green
+dependencies: {  }
 crm_entity: e65_creation
 id: e65_creation
 label: 'E65 Creation'

@@ -562,7 +562,20 @@ display:
           empty_zero: false
           hide_alter_empty: true
           destination: false
-      filters: {  }
+      filters:
+        status:
+          value: '1'
+          table: cidoc_entity
+          field: status
+          plugin_id: boolean
+          entity_type: cidoc_entity
+          entity_field: status
+          id: status
+          expose:
+            operator: ''
+            operator_limit_selection: false
+            operator_list: {  }
+          group: 1
       sorts: {  }
       header: {  }
       footer:

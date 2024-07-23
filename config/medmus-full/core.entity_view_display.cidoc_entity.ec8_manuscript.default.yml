@@ -42,6 +42,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  mss_associated_with_shelfmark_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   name:
     label: hidden
     type: string
@@ -70,6 +75,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  works_contained_in_ms_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   cidoc_admin_links: true
   'cidoc_properties:domain:p102_has_title': true
@@ -87,6 +97,7 @@ hidden:
   cidoc_temporal_summary: true
   citation: true
   content: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   significance: true

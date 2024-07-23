@@ -1,6 +1,6 @@
 uuid: 1b8dce2c-8ff3-4498-bd61-133af32d71bb
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - system.menu.main
@@ -11,7 +11,7 @@ dependencies:
 id: mainnavigation
 theme: oiko
 region: primary_menu
-weight: -8
+weight: 0
 provider: null
 plugin: 'system_menu_block:main'
 settings:

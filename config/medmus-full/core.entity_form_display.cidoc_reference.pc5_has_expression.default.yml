@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pc5_has_expression.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pc5_has_expression.default
 targetEntityType: cidoc_reference
 bundle: pc5_has_expression

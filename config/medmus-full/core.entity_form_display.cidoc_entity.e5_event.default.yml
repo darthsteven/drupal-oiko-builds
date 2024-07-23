@@ -36,6 +36,7 @@ third_party_settings:
         - group_who
         - group_what
         - group_hierarchy
+        - group_references
         - group_descriptive_text
       parent_name: group_main_deets
       weight: 5
@@ -66,7 +67,7 @@ third_party_settings:
       children:
         - content
       parent_name: group_tabset
-      weight: 27
+      weight: 28
       label: 'Descriptive text'
       format_type: tab
       format_settings:
@@ -190,6 +191,21 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: Hierarchy
+    group_references:
+      children:
+        - 'cidoc_properties:range:p67_refers_to'
+      parent_name: group_tabset
+      weight: 27
+      format_type: tab
+      region: content
+      format_settings:
+        fieldset_label_html: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: References
 _core:
   default_config_hash: ilxxf1HlXfDSYXRWUNJEpKwhM6Rhk8EyjsA3ypAioV4
 id: cidoc_entity.e5_event.default
@@ -247,6 +263,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:range:p67_refers_to':
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   'cidoc_properties:range:p9_consists_of':
     weight: 7
     region: content
@@ -285,6 +306,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 1
@@ -344,4 +372,3 @@ hidden:
   'cidoc_properties:range:p10_falls_within': true
   'cidoc_properties:range:p132_overlaps_with': true
   'cidoc_properties:range:p133_is_separated_from': true
-  'cidoc_properties:range:p67_refers_to': true

@@ -1,6 +1,6 @@
 uuid: 170fe0df-07c3-4293-b124-95f417023bf1
 langcode: en
-status: false
+status: true
 dependencies:
   config:
     - cidoc.cidoc_entity_bundle.e21_person

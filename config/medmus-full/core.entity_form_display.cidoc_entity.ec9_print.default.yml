@@ -49,7 +49,6 @@ third_party_settings:
         - citation
         - 'cidoc_properties:domain:p48_has_preferred_identifier'
         - 'cidoc_properties:domain:p45_consists_of'
-        - 'cidoc_properties:domain:pa19_has_language'
         - group_dates
         - group_activities
         - group_works_contained
@@ -91,7 +90,7 @@ third_party_settings:
         - 'cidoc_properties:range:p108_has_produced'
         - 'cidoc_properties:range:p13_destroyed'
       parent_name: group_main_deets
-      weight: 7
+      weight: 6
       format_type: tab
       region: content
       format_settings:
@@ -106,7 +105,7 @@ third_party_settings:
       children:
         - 'cidoc_properties:range:p12_occurred_in_the_presence_of'
       parent_name: group_main_deets
-      weight: 8
+      weight: 7
       format_type: tab
       region: content
       format_settings:
@@ -121,7 +120,7 @@ third_party_settings:
       children:
         - 'cidoc_properties:domain:p128_carries'
       parent_name: group_main_deets
-      weight: 9
+      weight: 8
       format_type: tab
       region: content
       format_settings:
@@ -235,10 +234,10 @@ content:
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:pa19_has_language':
-    weight: 6
-    region: content
+    weight: 20
     settings: {  }
     third_party_settings: {  }
+    region: content
   'cidoc_properties:domain:pc1_has_metrical_affinities_with':
     weight: 6
     region: content
@@ -382,6 +381,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 1

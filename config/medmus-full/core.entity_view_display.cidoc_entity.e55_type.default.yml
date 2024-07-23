@@ -1,0 +1,90 @@
+uuid: 08faec7a-f00e-439b-a7c5-697bcae725c4
+langcode: en
+status: true
+dependencies:
+  config:
+    - cidoc.cidoc_entity_bundle.e55_type
+id: cidoc_entity.e55_type.default
+targetEntityType: cidoc_entity
+bundle: e55_type
+mode: default
+content:
+  'cidoc_properties:domain:p102_has_title':
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:domain:p1_is_identified_by':
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:domain:p2_has_type':
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:domain:p48_has_preferred_identifier':
+    weight: 20
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:range:p12_occurred_in_the_presence_of':
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:range:p2_has_type':
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:range:p67_refers_to':
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  'cidoc_properties:range:p94_has_created':
+    weight: 21
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  internal_name:
+    label: inline
+    type: string
+    weight: -3
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  map_link:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  name:
+    label: hidden
+    type: string
+    weight: -4
+    region: content
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+  timeline_link:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  cidoc_admin_links: true
+  cidoc_properties: true
+  cidoc_properties_transcript: true
+  cidoc_temporal_summary: true
+  citation: true
+  content: true
+  langcode: true
+  search_api_excerpt: true
+  significance: true
+  timeline_logo: true
+  timeline_preselect_option: true
+  user_id: true

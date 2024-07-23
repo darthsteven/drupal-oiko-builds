@@ -18,6 +18,11 @@ content:
     settings: {  }
     weight: 3
     third_party_settings: {  }
+  'cidoc_properties:domain:p10_falls_within':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   'cidoc_properties:domain:p11_had_participant':
     region: content
     weight: 5
@@ -28,6 +33,11 @@ content:
     weight: 6
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:domain:p134_continued':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   'cidoc_properties:domain:p145_separated':
     region: content
     weight: 7
@@ -68,11 +78,31 @@ content:
     weight: 14
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:domain:p9_consists_of':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  'cidoc_properties:range:p10_falls_within':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  'cidoc_properties:range:p134_continued':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   'cidoc_properties:range:p67_refers_to':
     region: content
     weight: 15
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:range:p9_consists_of':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   cidoc_temporal_summary:
     region: content
     type: string
@@ -86,6 +116,11 @@ content:
     weight: 4
     settings: {  }
     third_party_settings: {  }
+  maps_of_things_happened_in_activity_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   name:
     region: content
     type: string
@@ -94,6 +129,11 @@ content:
       link_to_entity: false
     weight: 0
     third_party_settings: {  }
+  p7_took_place_at_map_entity_view_3:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   significance:
     region: content
     type: entity_reference_entity_view
@@ -108,6 +148,7 @@ hidden:
   cidoc_properties_transcript: true
   citation: true
   internal_name: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_link: true

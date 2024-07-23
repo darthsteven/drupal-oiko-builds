@@ -9,7 +9,7 @@ dependencies:
 id: medmus_maincidocsearch
 theme: medmus
 region: search_header
-weight: -18
+weight: -16
 provider: null
 plugin: main_cidoc_search
 settings:

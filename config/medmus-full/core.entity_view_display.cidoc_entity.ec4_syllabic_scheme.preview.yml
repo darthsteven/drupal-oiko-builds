@@ -52,6 +52,26 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:domain:p1_is_identified_by':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  'cidoc_properties:domain:p2_has_type':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  'cidoc_properties:domain:p48_has_preferred_identifier':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  'cidoc_properties:range:p67_refers_to':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   citation:
     region: content
     type: entity_reference_revisions_entity_view
@@ -104,6 +124,7 @@ hidden:
   'cidoc_properties:range:pc8_has_syllabic_scheme': true
   cidoc_properties_transcript: true
   cidoc_temporal_summary: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_link: true

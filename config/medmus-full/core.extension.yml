@@ -1,13 +1,11 @@
 module:
   admin_toolbar: 0
-  anonymizer: 0
+  asset_injector: 0
   avatars: 0
   avatars_gravatar: 0
-  ban: 0
   block: 0
   block_content: 0
   breakpoint: 0
-  checklistapi: 0
   cidoc: 0
   cidoc_graphing: 0
   cidoc_spec: 0
@@ -15,11 +13,17 @@ module:
   ckeditor: 0
   color_field: 0
   comment: 0
+  config: 0
+  config_devel: 0
+  config_filter: 0
+  config_split: 0
+  config_update: 0
   contextual: 0
   css_editor: 0
   csv_serialization: 0
   ctools: 0
   dblog: 0
+  devel: 0
   dynamic_page_cache: 0
   editor: 0
   editor_file: 0
@@ -28,6 +32,7 @@ module:
   entity_share: 0
   entity_share_async: 0
   entity_share_client: 0
+  entity_share_notifier: 0
   entity_share_server: 0
   eva: 0
   field: 0
@@ -35,8 +40,6 @@ module:
   field_ui: 0
   file: 0
   filter: 0
-  gdpr: 0
-  gdpr_dump: 0
   geocoder: 0
   geocoder_autocomplete: 0
   geofield: 0
@@ -45,6 +48,7 @@ module:
   history: 0
   honeypot: 0
   http_auth: 0
+  iframe_resizer: 0
   image: 0
   inside_iframe: 0
   jsonapi: 0
@@ -54,9 +58,6 @@ module:
   leaflet_widget: 0
   link: 0
   medmus_cidoc: 0
-  medmus_contrafacta: 0
-  medmus_leaflet: 0
-  medmus_medmel: 0
   medmus_share: 0
   menu_link_content: 0
   menu_ui: 0
@@ -78,6 +79,7 @@ module:
   options: 0
   path: 0
   path_alias: 0
+  quickedit: 0
   r4032login: 0
   rdf: 0
   rest: 0
@@ -96,11 +98,8 @@ module:
   tour_ui: 0
   tracker: 0
   unlimited_number: 0
-  update: 0
-  upgrade_status: 0
   user: 0
   views_bulk_operations: 0
-  views_delimited_list: 0
   views_fields_on_off: 0
   views_ui: 0
   webform: 0

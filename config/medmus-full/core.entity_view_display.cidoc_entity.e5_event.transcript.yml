@@ -13,6 +13,16 @@ targetEntityType: cidoc_entity
 bundle: e5_event
 mode: transcript
 content:
+  'cidoc_properties:domain:p48_has_preferred_identifier':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  'cidoc_properties:range:p67_refers_to':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   cidoc_properties_transcript:
     weight: 3
     region: content
@@ -39,6 +49,11 @@ content:
     label: hidden
     settings: {  }
     third_party_settings: {  }
+  maps_of_things_happened_in_activity_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   name:
     label: hidden
     type: string
@@ -47,6 +62,11 @@ content:
     settings:
       link_to_entity: false
     third_party_settings: {  }
+  p7_took_place_at_map_entity_view_3:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   significance:
     type: entity_reference_entity_view
     weight: 2
@@ -81,6 +101,7 @@ hidden:
   'cidoc_properties:range:p70_documents': true
   'cidoc_properties:range:p9_consists_of': true
   internal_name: true
+  langcode: true
   map_link: true
   p11_has_participant_entity_view_1: true
   p12_occurred_in_the_presence_of_entity_view_1: true

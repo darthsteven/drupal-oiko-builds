@@ -5,6 +5,7 @@ dependencies:
   config:
     - cidoc.cidoc_entity_bundle.e35_title
     - cidoc.cidoc_entity_bundle.ec1_work
+    - cidoc.cidoc_entity_bundle.ec6_music
     - cidoc.cidoc_property.p67_refers_to
     - field.storage.cidoc_reference.domain
 id: cidoc_reference.p67_refers_to.domain
@@ -27,5 +28,6 @@ settings:
     target_bundles:
       e35_title: e35_title
       ec1_work: ec1_work
+      ec6_music: ec6_music
     auto_create_bundle: e35_title
 field_type: entity_reference

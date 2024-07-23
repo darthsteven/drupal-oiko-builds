@@ -2,6 +2,10 @@ uuid: 4d71e123-a4d6-4d03-aeb5-964881bbf7a5
 langcode: en
 status: true
 dependencies:
+  module:
+    - ctools
+    - node
+    - user
   theme:
     - medmus
 id: medmus_local_tasks
@@ -17,4 +21,34 @@ settings:
   label_display: '0'
   primary: true
   secondary: true
-visibility: {  }
+visibility:
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    bundles:
+      content_page: content_page
+      narrative: narrative
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  node_type:
+    id: node_type
+    bundles:
+      content_page: content_page
+      narrative: narrative
+    negate: false
+    context_mapping:
+      node: '@node.node_route_context:node'
+  user_role:
+    id: user_role
+    roles:
+      anonymous: anonymous
+      authenticated: authenticated
+      administrator: administrator
+      content_editor: content_editor
+      forum_user: forum_user
+      moderator: moderator
+      moderated_contributor: moderated_contributor
+      pure_html_user: pure_html_user
+    negate: false
+    context_mapping:
+      user: '@user.current_user_context:current_user'

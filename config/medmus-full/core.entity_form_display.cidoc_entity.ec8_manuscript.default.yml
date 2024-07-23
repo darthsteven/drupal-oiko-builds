@@ -53,7 +53,6 @@ third_party_settings:
         - internal_name
         - citation
         - 'cidoc_properties:domain:p48_has_preferred_identifier'
-        - 'cidoc_properties:domain:pa19_has_language'
         - 'cidoc_properties:domain:p45_consists_of'
       parent_name: group_data
       weight: 3
@@ -236,11 +235,6 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  'cidoc_properties:domain:pa19_has_language':
-    weight: 5
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   'cidoc_properties:domain:pc1_has_metrical_affinities_with':
     weight: 6
     region: content
@@ -390,6 +384,13 @@ content:
       placeholder: ''
     third_party_settings: {  }
     region: content
+  langcode:
+    type: language_select
+    weight: 10
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 1
@@ -447,6 +448,7 @@ hidden:
   'cidoc_properties:domain:p1_is_identified_by': true
   'cidoc_properties:domain:p2_has_type': true
   'cidoc_properties:domain:p67_refers_to': true
+  'cidoc_properties:domain:pa19_has_language': true
   'cidoc_properties:range:p132_overlaps_with': true
   'cidoc_properties:range:p133_is_separated_from': true
   'cidoc_properties:range:p67_refers_to': true

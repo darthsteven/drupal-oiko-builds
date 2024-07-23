@@ -68,6 +68,11 @@ content:
     settings: {  }
     weight: 4
     third_party_settings: {  }
+  duplicate_of_map_of_places_people_went_refers_to__entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   internal_name:
     region: content
     type: string
@@ -143,6 +148,7 @@ hidden:
   duplicate_of_p15_was_influenced_by_entity_view_1: true
   e6_destroyed_entity_view_1: true
   key_achievements_entity_view_1: true
+  langcode: true
   map_link: true
   map_of_places_people_went_entity_view_1: true
   map_of_places_people_went_references__entity_view_1: true

@@ -73,8 +73,12 @@ display:
         options:
           grouping:
             -
-              field: name
+              field: field_source_type_1
               rendered: false
+              rendered_strip: false
+            -
+              field: name
+              rendered: true
               rendered_strip: false
           row_class: ''
           default_row_class: true
@@ -687,7 +691,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '{{field_editor}} (ed.),&nbsp;'
+            text: '{{field_editor}} (ed.),'
             make_link: false
             path: ''
             absolute: false
@@ -820,7 +824,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if field_source_type == 'Primary source'  and not field_author and not field_editor%}{{field_title_long|striptags('<em><i>')|raw|trim|trim(\" \\t\\n\\r\\0\\x0B\\xC2\\xA0\")}}\r\n{% elseif field_journal_1 or field_collective_work_1 %}‘{{field_title_long|striptags('<em><i>')|trim|trim(\" \\t\\n\\r\\0\\x0B\\xC2\\xA0\")|raw}}’,&nbsp;\r\n{% else %}{% set LongTitle = field_title_long|striptags('<em><i>')|replace({'<em>': '</em>', '</em>': '<em>','<i>': '</em>', '</i>': '<em>'}) %}<em>{{LongTitle|trim|raw}}</em>\r\n{% endif %}"
+            text: "{% if field_source_type == 'Primary source'  and not field_author and not field_editor%}{{field_title_long|striptags('<em><i>')|raw|trim|trim(\" \\t\\n\\r\\0\\x0B\\xC2\\xA0\")}}\r\n{% elseif field_journal_1 or field_collective_work_1 %}‘{{field_title_long|striptags('<em><i>')|trim|trim(\" \\t\\n\\r\\0\\x0B\\xC2\\xA0\")|raw}}’,\r\n{% else %}{% set LongTitle = field_title_long|striptags('<em><i>')|replace({'<em>': '</em>', '</em>': '<em>','<i>': '</em>', '</i>': '<em>'}) %}<em>{{LongTitle|trim|raw}}</em>\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1134,7 +1138,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: " ({{field_place_of_publication|replace({'Roma': \"Rome\", 'Firenze': \"Florence\", 'Venezia': \"Venice\", 'Milano': \"Milan\"})|raw}}:\r\n"
+            text: "({{field_place_of_publication|replace({'Roma': \"Rome\", 'Firenze': \"Florence\", 'Venezia': \"Venice\", 'Milano': \"Milan\"})|raw}}:\r\n"
             make_link: false
             path: ''
             absolute: false
@@ -1197,7 +1201,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: "{% if field_place_of_publication %}{{field_publisher}},\r\n{% else %} ({{field_publisher}},\r\n{% endif %}"
+            text: "{% if field_place_of_publication %}{{field_publisher}},\r\n{% else %}({{field_publisher}},\r\n{% endif %}"
             make_link: false
             path: ''
             absolute: false
@@ -1441,6 +1445,48 @@ display:
           expose:
             operator_limit_selection: false
             operator_list: {  }
+        status:
+          id: status
+          table: taxonomy_term_field_data
+          field: status
+          relationship: none
+          group_type: group
+          admin_label: ''
+          operator: '='
+          value: '1'
+          group: 1
+          exposed: false
+          expose:
+            operator_id: ''
+            label: ''
+            description: ''
+            use_operator: false
+            operator: ''
+            identifier: ''
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+            operator_limit_selection: false
+            operator_list: {  }
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          entity_type: taxonomy_term
+          entity_field: status
+          plugin_id: boolean
         combine:
           id: combine
           table: views
@@ -1493,47 +1539,6 @@ display:
             field_publisher: field_publisher
             field_year: field_year
           plugin_id: combine
-        field_source_type_value:
-          id: field_source_type_value
-          table: taxonomy_term__field_source_type
-          field: field_source_type_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: or
-          value:
-            secondary: secondary
-          group: 1
-          exposed: false
-          expose:
-            operator_id: ''
-            label: ''
-            description: ''
-            use_operator: false
-            operator: ''
-            operator_limit_selection: false
-            operator_list: {  }
-            identifier: ''
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-            reduce: false
-          is_grouped: false
-          group_info:
-            label: ''
-            description: ''
-            identifier: ''
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items: {  }
-          reduce_duplicates: false
-          plugin_id: list_field
       sorts:
         field_source_type_value:
           id: field_source_type_value
@@ -1601,6 +1606,7 @@ display:
       arguments: {  }
       display_extenders: {  }
       group_by: false
+      css_class: bibliography
     cache_metadata:
       max-age: -1
       contexts:
@@ -1634,7 +1640,7 @@ display:
         type: normal
         title: Bibliography
         menu_name: main
-        weight: -33
+        weight: -35
       fields: {  }
       sorts: {  }
       filters:

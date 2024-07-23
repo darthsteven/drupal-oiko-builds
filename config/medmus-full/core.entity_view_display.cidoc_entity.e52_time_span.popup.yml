@@ -249,6 +249,7 @@ hidden:
   duplicate_of_p15_influenced_entity_view_1: true
   duplicate_of_p15_was_influenced_by_entity_view_1: true
   internal_name: true
+  langcode: true
   map_link: true
   p10_falls_within_entity_view_1: true
   p10_includes_entity_view_1: true

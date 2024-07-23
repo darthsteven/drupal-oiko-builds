@@ -54,7 +54,6 @@ settings:
           name: 'Block Formatting'
           items:
             - Format
-            - Styles
         -
           name: Tools
           items:

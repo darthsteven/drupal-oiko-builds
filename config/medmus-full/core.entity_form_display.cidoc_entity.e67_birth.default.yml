@@ -34,6 +34,7 @@ third_party_settings:
         - group_where
         - group_who
         - group_what
+        - group_references
         - group_descriptive_text
       parent_name: group_main_deets
       weight: 5
@@ -64,7 +65,7 @@ third_party_settings:
       children:
         - content
       parent_name: group_tabset
-      weight: 8
+      weight: 9
       label: 'Descriptive text'
       format_type: tab
       format_settings:
@@ -164,7 +165,7 @@ third_party_settings:
       children:
         - 'cidoc_properties:domain:p48_has_preferred_identifier'
       parent_name: group_oiko_world_settings
-      weight: 121
+      weight: 122
       format_type: tab
       region: content
       format_settings:
@@ -175,6 +176,21 @@ third_party_settings:
         formatter: closed
         required_fields: true
       label: 'Also known as'
+    group_references:
+      children:
+        - 'cidoc_properties:range:p67_refers_to'
+      parent_name: group_tabset
+      weight: 8
+      format_type: tab
+      region: content
+      format_settings:
+        fieldset_label_html: false
+        id: ''
+        classes: ''
+        description: ''
+        formatter: closed
+        required_fields: true
+      label: References
 _core:
   default_config_hash: ilxxf1HlXfDSYXRWUNJEpKwhM6Rhk8EyjsA3ypAioV4
 id: cidoc_entity.e67_birth.default
@@ -237,6 +253,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:range:p67_refers_to':
+    weight: 121
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   citation:
     type: entity_reference_paragraphs
     weight: 3
@@ -280,13 +301,13 @@ content:
     region: content
   path:
     type: path
-    weight: 126
+    weight: 127
     region: content
     settings: {  }
     third_party_settings: {  }
   significance:
     type: options_select
-    weight: 122
+    weight: 123
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -299,7 +320,7 @@ content:
     third_party_settings: {  }
   timeline_logo:
     type: image_image
-    weight: 125
+    weight: 126
     settings:
       progress_indicator: throbber
       preview_image_style: thumbnail
@@ -307,14 +328,14 @@ content:
     third_party_settings: {  }
   timeline_preselect_option:
     type: boolean_checkbox
-    weight: 124
+    weight: 125
     settings:
       display_label: true
     region: content
     third_party_settings: {  }
   user_id:
     type: entity_reference_autocomplete
-    weight: 123
+    weight: 124
     region: content
     settings:
       match_operator: CONTAINS
@@ -331,5 +352,4 @@ hidden:
   'cidoc_properties:range:p10_falls_within': true
   'cidoc_properties:range:p132_overlaps_with': true
   'cidoc_properties:range:p133_is_separated_from': true
-  'cidoc_properties:range:p67_refers_to': true
   'cidoc_properties:range:p9_consists_of': true

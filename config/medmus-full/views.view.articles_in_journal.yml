@@ -81,7 +81,6 @@ display:
           columns:
             field_issue_fascicule: field_issue_fascicule
             name_1: name_1
-            field_title_long: field_title_long
           info:
             field_issue_fascicule:
               sortable: false
@@ -97,14 +96,7 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
-            field_title_long:
-              sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-          default: field_issue_fascicule
+          default: '-1'
           empty_table: false
       row:
         type: fields

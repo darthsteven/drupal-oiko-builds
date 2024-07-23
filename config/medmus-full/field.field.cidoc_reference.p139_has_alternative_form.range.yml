@@ -6,8 +6,6 @@ dependencies:
     - cidoc.cidoc_entity_bundle.e35_title
     - cidoc.cidoc_entity_bundle.e41_appellation
     - cidoc.cidoc_entity_bundle.e42_identifier
-    - cidoc.cidoc_entity_bundle.ec4_syllabic_scheme
-    - cidoc.cidoc_entity_bundle.ec5_rhyme_scheme
     - cidoc.cidoc_property.p139_has_alternative_form
     - field.storage.cidoc_reference.range
 id: cidoc_reference.p139_has_alternative_form.range
@@ -31,7 +29,5 @@ settings:
       e35_title: e35_title
       e41_appellation: e41_appellation
       e42_identifier: e42_identifier
-      ec4_syllabic_scheme: ec4_syllabic_scheme
-      ec5_rhyme_scheme: ec5_rhyme_scheme
     auto_create_bundle: e35_title
 field_type: entity_reference

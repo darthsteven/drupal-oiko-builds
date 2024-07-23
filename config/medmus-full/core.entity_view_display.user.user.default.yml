@@ -35,4 +35,5 @@ hidden:
   avatars_user_picture: true
   field_contact_preference: true
   field_terms_and_privacy: true
+  langcode: true
   search_api_excerpt: true

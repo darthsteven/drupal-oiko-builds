@@ -130,6 +130,11 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:range:p67_refers_to':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   'cidoc_properties:range:p9_consists_of':
     weight: 21
     region: content
@@ -142,6 +147,11 @@ content:
     region: content
   duplicate_of_p15_was_influenced_by_entity_view_1:
     weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  maps_of_things_happened_in_activity_entity_view_1:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -208,6 +218,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  p7_took_place_at_map_entity_view_3:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   p95_formed_group_entity_view_1:
     weight: 5
     settings: {  }
@@ -253,6 +268,7 @@ hidden:
   citation: true
   content: true
   internal_name: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_logo: true

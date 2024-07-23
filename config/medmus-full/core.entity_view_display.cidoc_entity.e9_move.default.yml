@@ -265,6 +265,11 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     region: content
+  maps_of_things_happened_in_activity_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   name:
     label: hidden
     type: string
@@ -326,6 +331,11 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  stefano_trying_stuff_dupl_e9_move_map__entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   timeline_link:
     weight: 1
     region: content
@@ -348,6 +358,7 @@ hidden:
   cidoc_temporal_summary: true
   citation: true
   content: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_logo: true

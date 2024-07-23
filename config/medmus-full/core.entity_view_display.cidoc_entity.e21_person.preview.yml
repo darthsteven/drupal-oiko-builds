@@ -6,7 +6,6 @@ dependencies:
     - cidoc.cidoc_entity_bundle.e21_person
     - core.entity_view_mode.cidoc_entity.preview
     - field.field.cidoc_entity.e21_person.field_generation
-    - field.field.cidoc_entity.e21_person.field_notes
   module:
     - entity_reference_revisions
     - field_group
@@ -44,26 +43,6 @@ targetEntityType: cidoc_entity
 bundle: e21_person
 mode: preview
 content:
-  activity_of_author_entity_view_1:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  activity_of_author_entity_view_2:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  childrens_with_entity_view_2:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
-  childrens_with_entity_view_3:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   cidoc_admin_links:
     weight: 8
     region: content
@@ -75,15 +54,15 @@ content:
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:pa19_has_language':
-    weight: 20
+    weight: 3
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   'cidoc_properties:range:pc11_has_spouse':
-    weight: 21
+    weight: 4
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   citation:
     region: content
     type: entity_reference_revisions_entity_view
@@ -100,6 +79,16 @@ content:
     settings: {  }
     weight: 5
     third_party_settings: {  }
+  duplicate_of_map_of_places_people_went_refers_to__entity_view_1:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  entity_change_entity_view_1:
+    weight: 5
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   internal_name:
     region: content
     type: string
@@ -108,21 +97,11 @@ content:
       link_to_entity: false
     weight: 2
     third_party_settings: {  }
-  is_referred_to_by_entity_view_1:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   is_referred_to_by_entity_view_2:
-    weight: 10
+    weight: 2
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
-  married_to_entity_view_1:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   name:
     region: content
     type: string
@@ -131,11 +110,6 @@ content:
       link_to_entity: true
     weight: 1
     third_party_settings: {  }
-  rejected_or_debated_attributions__entity_view_1:
-    weight: 10
-    settings: {  }
-    third_party_settings: {  }
-    region: content
   significance:
     region: content
     type: entity_reference_label
@@ -241,7 +215,6 @@ hidden:
   duplicate_of_p15_was_influenced_by_entity_view_1: true
   e6_destroyed_entity_view_1: true
   field_generation: true
-  field_notes: true
   key_achievements_entity_view_1: true
   map_link: true
   map_of_places_people_went_entity_view_1: true

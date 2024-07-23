@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pa1_has_patron.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pa1_has_patron.default
 targetEntityType: cidoc_reference
 bundle: pa1_has_patron

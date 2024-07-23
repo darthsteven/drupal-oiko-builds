@@ -450,7 +450,7 @@ display:
           empty: false
           tokenize: false
           content:
-            value: "Check also:<ul>\r\n<li><a href=\"/check-time-spans\">Check Time-Spans</a></li>\r\n<li><a href=\"/check-places\">Check Places</a></li>\r\n<li><a href=\"/duplicates\">Check Duplicates</a></li>\r\n<li><a href=\"/content-populated\">Check if Entities are populated<a/></li>\r\n<li><a href=\"/check-creations\">Check Creations</a></li>\r\n<li><a href=\"/admin/references\">References</a></li>\r\n</ul>\r\n<br/>\r\n<h1>Content Overview</h1>"
+            value: "Check also:<ul>\r\n<li><a href=\"/check-time-spans\">Check Time-Spans</a></li>\r\n<li><a href=\"/check-places\">Check Places</a></li>\r\n<li><a href=\"/duplicates\">Check Duplicates</a></li>\r\n<li><a href=\"/content-populated\">Check if Entities are populated<a/></li>\r\n<li><a href=\"/admin/references\">References</a></li>\r\n</ul>\r\n<br/>\r\n<h1>Content Overview</h1>"
             format: basic_html
           plugin_id: text
       footer: {  }

@@ -8,7 +8,6 @@ dependencies:
     - field.field.taxonomy_term.source_books.field_editor
     - field.field.taxonomy_term.source_books.field_issue_fascicule
     - field.field.taxonomy_term.source_books.field_journal
-    - field.field.taxonomy_term.source_books.field_link
     - field.field.taxonomy_term.source_books.field_place_of_publication
     - field.field.taxonomy_term.source_books.field_pp_
     - field.field.taxonomy_term.source_books.field_publisher
@@ -19,7 +18,6 @@ dependencies:
     - taxonomy.vocabulary.source_books
   module:
     - field_group
-    - link
     - text
 third_party_settings:
   field_group:
@@ -201,14 +199,6 @@ content:
     third_party_settings: {  }
     type: entity_reference_autocomplete
     region: content
-  field_link:
-    weight: 25
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
-    region: content
   field_place_of_publication:
     weight: 17
     settings:
@@ -263,6 +253,13 @@ content:
     third_party_settings: {  }
     type: string_textfield
     region: content
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
   name:
     type: string_textfield
     weight: 12

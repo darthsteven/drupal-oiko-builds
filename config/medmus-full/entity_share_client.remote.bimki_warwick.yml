@@ -1,0 +1,13 @@
+uuid: a5d4bc12-2204-4014-a734-4d329cc516d1
+langcode: en
+status: true
+dependencies: {  }
+id: bimki_warwick
+label: 'Bimki - Warwick'
+url: 'https://bimki.lnx.warwick.ac.uk'
+auth:
+  pid: basic_auth_with_header
+  uuid: abda5705-aa0d-402f-9d2a-0394e6e58a34
+  data:
+    credential_provider: entity_share
+    storage_key: abda5705-aa0d-402f-9d2a-0394e6e58a34

@@ -8,5 +8,5 @@ id: front
 label: 'Front page'
 tags:
   shortlink: '[site:url]'
-  title: 'Connecting Medieval Music'
   canonical_url: '[site:url]'
+  title: '[site:name]'

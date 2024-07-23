@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.p128_carries.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.p128_carries.default
 targetEntityType: cidoc_reference
 bundle: p128_carries

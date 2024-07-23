@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.p102_has_title.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.p102_has_title.default
 targetEntityType: cidoc_reference
 bundle: p102_has_title

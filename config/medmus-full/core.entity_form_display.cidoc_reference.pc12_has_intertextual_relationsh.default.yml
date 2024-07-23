@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pc12_has_intertextual_relationsh.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pc12_has_intertextual_relationsh.default
 targetEntityType: cidoc_reference
 bundle: pc12_has_intertextual_relationsh

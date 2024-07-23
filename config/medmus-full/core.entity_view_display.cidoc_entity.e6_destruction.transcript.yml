@@ -13,6 +13,16 @@ targetEntityType: cidoc_entity
 bundle: e6_destruction
 mode: transcript
 content:
+  'cidoc_properties:domain:p48_has_preferred_identifier':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  'cidoc_properties:range:p67_refers_to':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   cidoc_properties_transcript:
     weight: 3
     region: content
@@ -46,6 +56,11 @@ content:
     region: content
   e6_destroyed_entity_view_1:
     weight: 10
+    region: content
+  maps_of_things_happened_in_activity_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
     region: content
   name:
     label: hidden
@@ -82,6 +97,11 @@ content:
     region: content
   p4_has_time_span_entity_view_1:
     weight: 4
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  p7_took_place_at_map_entity_view_3:
+    weight: 10
     settings: {  }
     third_party_settings: {  }
     region: content
@@ -137,6 +157,7 @@ hidden:
   'cidoc_properties:range:p9_consists_of': true
   cidoc_temporal_summary: true
   internal_name: true
+  langcode: true
   map_link: true
   p11_has_participant_entity_view_1: true
   p12_occurred_in_the_presence_of_entity_view_1: true

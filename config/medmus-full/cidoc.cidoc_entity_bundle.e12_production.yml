@@ -1,12 +1,7 @@
 uuid: fa94248b-1d12-4228-8f8b-0068b484729e
 langcode: en
 status: true
-dependencies:
-  module:
-    - oiko_leaflet
-third_party_settings:
-  oiko_leaflet:
-    item_color: yellow
+dependencies: {  }
 _core:
   default_config_hash: db9SS1hPeweeTPjVSq2ta7obYhWHOVhC3pI4lwcctwU
 crm_entity: e12_production

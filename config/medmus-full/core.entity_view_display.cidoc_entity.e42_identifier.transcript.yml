@@ -121,6 +121,7 @@ hidden:
   'cidoc_properties:range:p70_documents': true
   field_exclude_from_duplicates_: true
   internal_name: true
+  langcode: true
   map_link: true
   search_api_excerpt: true
   timeline_link: true

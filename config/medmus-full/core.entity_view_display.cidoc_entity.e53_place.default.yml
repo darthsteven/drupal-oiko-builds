@@ -84,13 +84,8 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  'cidoc_properties:domain:p1_is_identified_by':
-    weight: 15
-    region: content
-    settings: {  }
-    third_party_settings: {  }
   'cidoc_properties:domain:p2_has_type':
-    weight: 14
+    weight: 16
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -100,17 +95,17 @@ content:
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:domain:p87_is_identified_by':
-    weight: 11
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  'cidoc_properties:domain:p89_falls_within':
     weight: 12
     region: content
     settings: {  }
     third_party_settings: {  }
+  'cidoc_properties:domain:p89_falls_within':
+    weight: 14
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   'cidoc_properties:domain:pa19_has_language':
-    weight: 13
+    weight: 15
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -130,11 +125,6 @@ content:
     settings: {  }
     third_party_settings: {  }
   'cidoc_properties:range:p27_moved_from':
-    weight: 16
-    region: content
-    settings: {  }
-    third_party_settings: {  }
-  'cidoc_properties:range:p67_refers_to':
     weight: 17
     region: content
     settings: {  }
@@ -149,13 +139,18 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
+  entity_change_entity_view_1:
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   events_at_this_location_entity_view_1:
     weight: 3
     settings: {  }
     third_party_settings: {  }
     region: content
   events_witnessed_by_place_sort_ts__entity_view_1:
-    weight: 9
+    weight: 8
     region: content
     settings: {  }
     third_party_settings: {  }
@@ -189,6 +184,11 @@ content:
       maxPossibleZoom: 18
     third_party_settings: {  }
     region: content
+  map_of_places_experiments__entity_view_2:
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   map_of_places_experiments__entity_view_4:
     weight: 8
     region: content
@@ -217,6 +217,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  place_s_appellation_view_entity_view_1:
+    weight: 13
+    region: content
+    settings: {  }
+    third_party_settings: {  }
   significance:
     type: entity_reference_label
     weight: 2
@@ -232,6 +237,8 @@ content:
     third_party_settings: {  }
 hidden:
   cidoc_admin_links: true
+  'cidoc_properties:domain:p1_is_identified_by': true
+  'cidoc_properties:range:p67_refers_to': true
   cidoc_properties_transcript: true
   cidoc_temporal_summary: true
   citation: true

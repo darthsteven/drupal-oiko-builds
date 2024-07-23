@@ -13,6 +13,16 @@ targetEntityType: cidoc_entity
 bundle: e9_move
 mode: transcript
 content:
+  'cidoc_properties:domain:p48_has_preferred_identifier':
+    weight: 20
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+  'cidoc_properties:range:p67_refers_to':
+    weight: 21
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   cidoc_properties_transcript:
     weight: 3
     region: content
@@ -89,6 +99,11 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
+  maps_of_things_happened_in_activity_entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
   name:
     label: hidden
     type: string
@@ -146,6 +161,11 @@ content:
       link: false
     third_party_settings: {  }
     region: content
+  stefano_trying_stuff_dupl_e9_move_map__entity_view_1:
+    weight: 10
+    settings: {  }
+    third_party_settings: {  }
+    region: content
 hidden:
   cidoc_admin_links: true
   cidoc_properties: true
@@ -176,6 +196,7 @@ hidden:
   'cidoc_properties:range:p70_documents': true
   'cidoc_properties:range:p9_consists_of': true
   internal_name: true
+  langcode: true
   map_link: true
   p16_used_specific_object_entity_view_1: true
   p17_motivated_entity_view_1: true

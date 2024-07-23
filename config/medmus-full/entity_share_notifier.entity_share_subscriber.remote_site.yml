@@ -1,0 +1,16 @@
+uuid: 3e4deb9e-210d-4ae1-9ba9-2f08f9136933
+langcode: en
+status: true
+dependencies: {  }
+id: remote_site
+label: 'Bimki (Warwick)'
+subscriber_url: 'https://bimki.lnx.warwick.ac.uk'
+auth:
+  pid: basic_auth_with_header
+  uuid: 462c4a6c-5805-4f4c-a959-19a30d516df4
+  data:
+    credential_provider: entity_share
+    storage_key: 462c4a6c-5805-4f4c-a959-19a30d516df4
+remote_id: rome
+remote_config_id: import
+channel_ids: {  }

@@ -8,6 +8,7 @@ dependencies:
     - field.field.cidoc_reference.pc11_has_spouse.range
   module:
     - oiko_citation
+    - squid_autocomplete
 id: cidoc_reference.pc11_has_spouse.default
 targetEntityType: cidoc_reference
 bundle: pc11_has_spouse

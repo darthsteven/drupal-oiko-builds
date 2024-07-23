@@ -48,12 +48,22 @@ display:
         options:
           offset: 0
       style:
-        type: default
+        type: table
         options:
           grouping: {  }
           row_class: ''
           default_row_class: true
           uses_fields: false
+          columns: {  }
+          default: ''
+          info: {  }
+          override: true
+          sticky: false
+          order: asc
+          caption: ''
+          summary: ''
+          description: ''
+          empty_table: false
       row:
         type: fields
         options:
@@ -75,7 +85,7 @@ display:
           exclude: false
           alter:
             alter_text: true
-            text: '<strong>Witnessed: </strong>{{name}} '
+            text: '<strong></strong>{{name}}'
             make_link: false
             path: ''
             absolute: false
@@ -118,7 +128,6 @@ display:
             link_to_entity: true
           group_column: value
           group_columns:
-            entity_id: entity_id
             value: value
           group_rows: true
           delta_limit: 0

@@ -6,8 +6,6 @@ dependencies:
     - field.field.user.user.avatars_avatar_generator
     - field.field.user.user.avatars_user_picture
     - field.field.user.user.field_contact_preference
-    - field.field.user.user.field_show_all_unpublished_entit
-    - field.field.user.user.field_show_my_unpublished_entiti
     - field.field.user.user.field_terms_and_privacy
     - field.field.user.user.user_picture
     - image.style.thumbnail
@@ -34,25 +32,11 @@ content:
     region: content
   field_contact_preference:
     type: boolean_checkbox
-    weight: 3
-    settings:
-      display_label: true
-    third_party_settings: {  }
-    region: content
-  field_show_all_unpublished_entit:
-    type: boolean_checkbox
     weight: 4
-    region: content
     settings:
       display_label: true
     third_party_settings: {  }
-  field_show_my_unpublished_entiti:
-    type: boolean_checkbox
-    weight: 5
     region: content
-    settings:
-      display_label: true
-    third_party_settings: {  }
   language:
     weight: 2
     region: content
@@ -65,5 +49,6 @@ hidden:
   avatars_avatar_generator: true
   field_terms_and_privacy: true
   google_analytics: true
+  langcode: true
   path: true
   user_picture: true
